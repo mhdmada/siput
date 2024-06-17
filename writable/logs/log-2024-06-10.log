@@ -1,0 +1,17 @@
+INFO - 2024-06-10 06:43:51 --> REDIRECTED ROUTE at http://localhost:8080/home
+INFO - 2024-06-10 06:44:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-10 06:44:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-10 06:45:35 --> CSRF token verified.
+INFO - 2024-06-10 06:45:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-10 06:45:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-10 06:47:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-10 07:12:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-10 07:14:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-10 07:35:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-10 07:35:36 --> ErrorException: Maximum execution time of 60 seconds exceeded
+[Method: GET, Route: umkm]
+in SYSTEMPATH\Debug\Toolbar\Collectors\Config.php on line 43.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-06-10 07:36:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-10 07:36:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-10 07:37:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

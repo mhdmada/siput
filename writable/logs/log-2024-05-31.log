@@ -1,0 +1,208 @@
+INFO - 2024-05-31 12:49:17 --> REDIRECTED ROUTE at http://localhost:8080/home
+INFO - 2024-05-31 12:49:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-31 12:49:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-31 12:49:36 --> CSRF token verified.
+INFO - 2024-05-31 12:49:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-31 12:49:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-31 12:49:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-31 12:54:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-31 13:02:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-31 13:03:31 --> CSRF token verified.
+INFO - 2024-05-31 13:04:34 --> CSRF token verified.
+INFO - 2024-05-31 13:04:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-31 13:10:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-31 13:11:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-31 13:11:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-31 13:11:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-31 13:11:45 --> REDIRECTED ROUTE at http://localhost:8080/home
+INFO - 2024-05-31 13:11:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-31 13:11:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-31 13:11:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-31 13:11:56 --> CSRF token verified.
+INFO - 2024-05-31 13:11:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-31 13:11:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-31 13:12:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-31 13:12:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-31 13:12:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-31 13:12:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-31 13:12:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-31 13:12:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-31 13:13:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-31 13:13:35 --> REDIRECTED ROUTE at http://localhost:8080/home
+INFO - 2024-05-31 13:13:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-31 13:13:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-31 13:13:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-31 13:15:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-31 13:15:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-31 13:15:23 --> CSRF token verified.
+INFO - 2024-05-31 13:15:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-31 13:15:24 --> mysqli_sql_exception: Unknown column 'nama_pelatihan' in 'field list' in C:\xampp\htdocs\siput_umkm\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\siput_umkm\system\Database\MySQLi\Connection.php(308): mysqli->query('UPDATE `penjual...', 0)
+#1 C:\xampp\htdocs\siput_umkm\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `penjual...')
+#2 C:\xampp\htdocs\siput_umkm\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `penjual...')
+#3 C:\xampp\htdocs\siput_umkm\system\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `penjual...', Array, false)
+#4 C:\xampp\htdocs\siput_umkm\app\Controllers\Penjualan.php(64): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\xampp\htdocs\siput_umkm\system\CodeIgniter.php(933): App\Controllers\Penjualan->update('1')
+#6 C:\xampp\htdocs\siput_umkm\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+#7 C:\xampp\htdocs\siput_umkm\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\siput_umkm\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\siput_umkm\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\siput_umkm\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\siput_umkm\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-05-31 13:15:24 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'nama_pelatihan' in 'field list'
+[Method: PUT, Route: penjualan/1]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `penjualan` SET `nama_pelatihan` = :nama_pelatihan:, `jadwal_pelatihan` = :jadwal_pelatihan:, `lokasi_pelatihan` = :lokasi_pelatihan:
+WHERE `id_penjualan` = :id_penjualan:', [...], false)
+ 2 APPPATH\Controllers\Penjualan.php(64): CodeIgniter\Database\BaseBuilder->update([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penjualan->update('1')
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\siput_umkm\\public\\index.php')
+CRITICAL - 2024-05-31 13:15:24 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'nama_pelatihan' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `penjualan` SET `nama_pelatihan` = NULL, `jadwal_pelatihan` = NULL, `lokasi_pelatihan` = NULL
+WHERE `id_penjualan` = \'1\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `penjualan` SET `nama_pelatihan` = NULL, `jadwal_pelatihan` = NULL, `lokasi_pelatihan` = NULL
+WHERE `id_penjualan` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `penjualan` SET `nama_pelatihan` = :nama_pelatihan:, `jadwal_pelatihan` = :jadwal_pelatihan:, `lokasi_pelatihan` = :lokasi_pelatihan:
+WHERE `id_penjualan` = :id_penjualan:', [...], false)
+ 4 APPPATH\Controllers\Penjualan.php(64): CodeIgniter\Database\BaseBuilder->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penjualan->update('1')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\siput_umkm\\public\\index.php')
+CRITICAL - 2024-05-31 13:15:24 --> [Caused by] mysqli_sql_exception: Unknown column 'nama_pelatihan' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('UPDATE `penjualan` SET `nama_pelatihan` = NULL, `jadwal_pelatihan` = NULL, `lokasi_pelatihan` = NULL
+WHERE `id_penjualan` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `penjualan` SET `nama_pelatihan` = NULL, `jadwal_pelatihan` = NULL, `lokasi_pelatihan` = NULL
+WHERE `id_penjualan` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `penjualan` SET `nama_pelatihan` = NULL, `jadwal_pelatihan` = NULL, `lokasi_pelatihan` = NULL
+WHERE `id_penjualan` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `penjualan` SET `nama_pelatihan` = :nama_pelatihan:, `jadwal_pelatihan` = :jadwal_pelatihan:, `lokasi_pelatihan` = :lokasi_pelatihan:
+WHERE `id_penjualan` = :id_penjualan:', [...], false)
+ 5 APPPATH\Controllers\Penjualan.php(64): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penjualan->update('1')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\siput_umkm\\public\\index.php')
+INFO - 2024-05-31 13:15:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-31 13:15:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-31 13:15:45 --> CSRF token verified.
+INFO - 2024-05-31 13:15:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-31 13:15:45 --> mysqli_sql_exception: Unknown column 'nama_pelatihan' in 'field list' in C:\xampp\htdocs\siput_umkm\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\siput_umkm\system\Database\MySQLi\Connection.php(308): mysqli->query('UPDATE `penjual...', 0)
+#1 C:\xampp\htdocs\siput_umkm\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `penjual...')
+#2 C:\xampp\htdocs\siput_umkm\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `penjual...')
+#3 C:\xampp\htdocs\siput_umkm\system\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `penjual...', Array, false)
+#4 C:\xampp\htdocs\siput_umkm\app\Controllers\Penjualan.php(64): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\xampp\htdocs\siput_umkm\system\CodeIgniter.php(933): App\Controllers\Penjualan->update('1')
+#6 C:\xampp\htdocs\siput_umkm\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+#7 C:\xampp\htdocs\siput_umkm\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\siput_umkm\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\siput_umkm\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\siput_umkm\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\siput_umkm\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-05-31 13:15:45 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'nama_pelatihan' in 'field list'
+[Method: PUT, Route: penjualan/1]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `penjualan` SET `nama_pelatihan` = :nama_pelatihan:, `jadwal_pelatihan` = :jadwal_pelatihan:, `lokasi_pelatihan` = :lokasi_pelatihan:
+WHERE `id_penjualan` = :id_penjualan:', [...], false)
+ 2 APPPATH\Controllers\Penjualan.php(64): CodeIgniter\Database\BaseBuilder->update([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penjualan->update('1')
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\siput_umkm\\public\\index.php')
+CRITICAL - 2024-05-31 13:15:45 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'nama_pelatihan' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `penjualan` SET `nama_pelatihan` = NULL, `jadwal_pelatihan` = NULL, `lokasi_pelatihan` = NULL
+WHERE `id_penjualan` = \'1\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `penjualan` SET `nama_pelatihan` = NULL, `jadwal_pelatihan` = NULL, `lokasi_pelatihan` = NULL
+WHERE `id_penjualan` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `penjualan` SET `nama_pelatihan` = :nama_pelatihan:, `jadwal_pelatihan` = :jadwal_pelatihan:, `lokasi_pelatihan` = :lokasi_pelatihan:
+WHERE `id_penjualan` = :id_penjualan:', [...], false)
+ 4 APPPATH\Controllers\Penjualan.php(64): CodeIgniter\Database\BaseBuilder->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penjualan->update('1')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\siput_umkm\\public\\index.php')
+CRITICAL - 2024-05-31 13:15:45 --> [Caused by] mysqli_sql_exception: Unknown column 'nama_pelatihan' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('UPDATE `penjualan` SET `nama_pelatihan` = NULL, `jadwal_pelatihan` = NULL, `lokasi_pelatihan` = NULL
+WHERE `id_penjualan` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `penjualan` SET `nama_pelatihan` = NULL, `jadwal_pelatihan` = NULL, `lokasi_pelatihan` = NULL
+WHERE `id_penjualan` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `penjualan` SET `nama_pelatihan` = NULL, `jadwal_pelatihan` = NULL, `lokasi_pelatihan` = NULL
+WHERE `id_penjualan` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `penjualan` SET `nama_pelatihan` = :nama_pelatihan:, `jadwal_pelatihan` = :jadwal_pelatihan:, `lokasi_pelatihan` = :lokasi_pelatihan:
+WHERE `id_penjualan` = :id_penjualan:', [...], false)
+ 5 APPPATH\Controllers\Penjualan.php(64): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penjualan->update('1')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\siput_umkm\\public\\index.php')
+INFO - 2024-05-31 13:21:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-31 13:21:45 --> CSRF token verified.
+INFO - 2024-05-31 13:21:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-31 13:21:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-31 13:27:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-31 13:29:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-31 13:29:14 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "tigabelas.jpg<"
+[Method: GET, Route: images/tigabelas.jpg%3C/td]
+in SYSTEMPATH\Router\Router.php on line 736.
+ 1 SYSTEMPATH\Router\Router.php(203): CodeIgniter\Router\Router->checkDisallowedChars('images/tigabelas.jpg</td')
+ 2 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('images/tigabelas.jpg</td')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\siput_umkm\\public\\index.php')
+INFO - 2024-05-31 13:33:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-31 13:42:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-31 13:58:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-31 13:58:40 --> REDIRECTED ROUTE at http://localhost:8080/home
+INFO - 2024-05-31 13:58:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-31 13:58:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-31 13:59:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-31 14:22:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-31 14:22:45 --> REDIRECTED ROUTE at http://localhost:8080/home
+INFO - 2024-05-31 14:22:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-31 14:22:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-31 14:22:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-31 14:22:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-31 14:22:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-31 14:23:05 --> REDIRECTED ROUTE at http://localhost:8080/home
+INFO - 2024-05-31 14:23:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-31 14:23:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-31 14:23:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-31 14:23:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-31 14:23:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-31 14:24:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-31 14:24:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-31 14:26:04 --> REDIRECTED ROUTE at http://localhost:8080/home
+INFO - 2024-05-31 14:26:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-31 14:26:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

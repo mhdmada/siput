@@ -1,0 +1,285 @@
+INFO - 2024-05-11 09:08:47 --> REDIRECTED ROUTE at http://localhost:8080/home
+INFO - 2024-05-11 09:08:55 --> REDIRECTED ROUTE at http://localhost:8080/home
+INFO - 2024-05-11 09:09:13 --> REDIRECTED ROUTE at http://localhost:8080/home
+INFO - 2024-05-11 09:09:59 --> REDIRECTED ROUTE at http://localhost:8080/home
+INFO - 2024-05-11 09:10:04 --> REDIRECTED ROUTE at http://localhost:8080/home
+INFO - 2024-05-11 09:10:06 --> REDIRECTED ROUTE at http://localhost:8080/home
+INFO - 2024-05-11 09:10:09 --> REDIRECTED ROUTE at http://localhost:8080/home
+INFO - 2024-05-11 09:11:26 --> REDIRECTED ROUTE at http://localhost:8080/%5CApp%5CControllers%5CHome::index
+CRITICAL - 2024-05-11 09:11:27 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "\App\Controllers\Home::index"
+[Method: GET, Route: %5CApp%5CControllers%5CHome::index]
+in SYSTEMPATH\Router\Router.php on line 736.
+ 1 SYSTEMPATH\Router\Router.php(203): CodeIgniter\Router\Router->checkDisallowedChars('\\App\\Controllers\\Home::index')
+ 2 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('\\App\\Controllers\\Home::index')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\siput_umkm\\public\\index.php')
+INFO - 2024-05-11 09:11:34 --> REDIRECTED ROUTE at http://localhost:8080/%5CApp%5CControllers%5CHome::index
+CRITICAL - 2024-05-11 09:11:34 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "\App\Controllers\Home::index"
+[Method: GET, Route: %5CApp%5CControllers%5CHome::index]
+in SYSTEMPATH\Router\Router.php on line 736.
+ 1 SYSTEMPATH\Router\Router.php(203): CodeIgniter\Router\Router->checkDisallowedChars('\\App\\Controllers\\Home::index')
+ 2 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('\\App\\Controllers\\Home::index')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\siput_umkm\\public\\index.php')
+CRITICAL - 2024-05-11 09:11:52 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "\App\Controllers\Home::index"
+[Method: GET, Route: %5CApp%5CControllers%5CHome::index]
+in SYSTEMPATH\Router\Router.php on line 736.
+ 1 SYSTEMPATH\Router\Router.php(203): CodeIgniter\Router\Router->checkDisallowedChars('\\App\\Controllers\\Home::index')
+ 2 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('\\App\\Controllers\\Home::index')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\siput_umkm\\public\\index.php')
+CRITICAL - 2024-05-11 09:11:54 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "\App\Controllers\Home::index"
+[Method: GET, Route: %5CApp%5CControllers%5CHome::index]
+in SYSTEMPATH\Router\Router.php on line 736.
+ 1 SYSTEMPATH\Router\Router.php(203): CodeIgniter\Router\Router->checkDisallowedChars('\\App\\Controllers\\Home::index')
+ 2 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('\\App\\Controllers\\Home::index')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\siput_umkm\\public\\index.php')
+INFO - 2024-05-11 09:12:00 --> REDIRECTED ROUTE at http://localhost:8080/home
+INFO - 2024-05-11 09:12:40 --> REDIRECTED ROUTE at http://localhost:8080/home
+INFO - 2024-05-11 09:12:51 --> REDIRECTED ROUTE at http://localhost:8080/home
+INFO - 2024-05-11 09:14:56 --> REDIRECTED ROUTE at http://localhost:8080/home
+INFO - 2024-05-11 09:14:59 --> REDIRECTED ROUTE at http://localhost:8080/home
+INFO - 2024-05-11 09:15:02 --> REDIRECTED ROUTE at http://localhost:8080/home
+INFO - 2024-05-11 09:15:58 --> REDIRECTED ROUTE at http://localhost:8080/home
+INFO - 2024-05-11 09:16:00 --> REDIRECTED ROUTE at http://localhost:8080/home
+INFO - 2024-05-11 09:16:04 --> REDIRECTED ROUTE at http://localhost:8080/home
+INFO - 2024-05-11 09:17:28 --> REDIRECTED ROUTE at http://localhost:8080/home
+INFO - 2024-05-11 09:17:39 --> REDIRECTED ROUTE at http://localhost:8080/home
+INFO - 2024-05-11 09:17:41 --> REDIRECTED ROUTE at http://localhost:8080/home
+INFO - 2024-05-11 09:17:42 --> REDIRECTED ROUTE at http://localhost:8080/home
+INFO - 2024-05-11 14:11:51 --> REDIRECTED ROUTE at http://localhost:8080/home
+ERROR - 2024-05-11 14:53:18 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\siput_umkm\system\Database\MySQLi\Connection.php:187
+Stack trace:
+#0 C:\xampp\htdocs\siput_umkm\system\Database\MySQLi\Connection.php(187): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 C:\xampp\htdocs\siput_umkm\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\siput_umkm\system\Database\Database.php(68): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\siput_umkm\system\Database\Config.php(111): CodeIgniter\Database\Database->loadForge(Object(CodeIgniter\Database\MySQLi\Connection))
+#4 C:\xampp\htdocs\siput_umkm\app\Config\Routes.php(13): CodeIgniter\Database\Config::forge()
+#5 C:\xampp\htdocs\siput_umkm\system\CodeIgniter.php(877): CodeIgniter\Router\RouteCollection->{closure}()
+#6 C:\xampp\htdocs\siput_umkm\system\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+#7 C:\xampp\htdocs\siput_umkm\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\siput_umkm\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\siput_umkm\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\siput_umkm\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\siput_umkm\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\siput_umkm\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\siput_umkm\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\siput_umkm\system\Database\Database.php(68): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\siput_umkm\system\Database\Config.php(111): CodeIgniter\Database\Database->loadForge(Object(CodeIgniter\Database\MySQLi\Connection))
+#3 C:\xampp\htdocs\siput_umkm\app\Config\Routes.php(13): CodeIgniter\Database\Config::forge()
+#4 C:\xampp\htdocs\siput_umkm\system\CodeIgniter.php(877): CodeIgniter\Router\RouteCollection->{closure}()
+#5 C:\xampp\htdocs\siput_umkm\system\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+#6 C:\xampp\htdocs\siput_umkm\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\siput_umkm\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\siput_umkm\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\siput_umkm\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 C:\xampp\htdocs\siput_umkm\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-05-11 14:53:18 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: GET, Route: create-db]
+in SYSTEMPATH\Database\BaseConnection.php on line 457.
+ 1 SYSTEMPATH\Database\Database.php(68): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\Config.php(111): CodeIgniter\Database\Database->loadForge(Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 APPPATH\Config\Routes.php(13): CodeIgniter\Database\Config::forge()
+ 4 SYSTEMPATH\CodeIgniter.php(877): CodeIgniter\Router\RouteCollection->{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\siput_umkm\\public\\index.php')
+ERROR - 2024-05-11 14:58:08 --> mysqli_sql_exception: Can't create database 'siput'; database exists in C:\xampp\htdocs\siput_umkm\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\siput_umkm\system\Database\MySQLi\Connection.php(308): mysqli->query('CREATE DATABASE...', 0)
+#1 C:\xampp\htdocs\siput_umkm\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('CREATE DATABASE...')
+#2 C:\xampp\htdocs\siput_umkm\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE DATABASE...')
+#3 C:\xampp\htdocs\siput_umkm\system\Database\Forge.php(237): CodeIgniter\Database\BaseConnection->query('CREATE DATABASE...')
+#4 C:\xampp\htdocs\siput_umkm\app\Config\Routes.php(14): CodeIgniter\Database\Forge->createDatabase('siput')
+#5 C:\xampp\htdocs\siput_umkm\system\CodeIgniter.php(877): CodeIgniter\Router\RouteCollection->{closure}()
+#6 C:\xampp\htdocs\siput_umkm\system\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+#7 C:\xampp\htdocs\siput_umkm\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\siput_umkm\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\siput_umkm\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\siput_umkm\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\siput_umkm\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-05-11 14:58:08 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to create the specified database.
+[Method: GET, Route: create-db]
+in SYSTEMPATH\Database\Forge.php on line 256.
+ 1 APPPATH\Config\Routes.php(14): CodeIgniter\Database\Forge->createDatabase('siput')
+ 2 SYSTEMPATH\CodeIgniter.php(877): CodeIgniter\Router\RouteCollection->{closure}()
+ 3 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\siput_umkm\\public\\index.php')
+CRITICAL - 2024-05-11 14:58:08 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Can't create database 'siput'; database exists
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\Forge.php(237): CodeIgniter\Database\BaseConnection->query('CREATE DATABASE `siput` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci')
+ 2 APPPATH\Config\Routes.php(14): CodeIgniter\Database\Forge->createDatabase('siput')
+ 3 SYSTEMPATH\CodeIgniter.php(877): CodeIgniter\Router\RouteCollection->{closure}()
+ 4 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\siput_umkm\\public\\index.php')
+CRITICAL - 2024-05-11 14:58:08 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Can't create database 'siput'; database exists
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('CREATE DATABASE `siput` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE DATABASE `siput` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci')
+ 3 SYSTEMPATH\Database\Forge.php(237): CodeIgniter\Database\BaseConnection->query('CREATE DATABASE `siput` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci')
+ 4 APPPATH\Config\Routes.php(14): CodeIgniter\Database\Forge->createDatabase('siput')
+ 5 SYSTEMPATH\CodeIgniter.php(877): CodeIgniter\Router\RouteCollection->{closure}()
+ 6 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\siput_umkm\\public\\index.php')
+CRITICAL - 2024-05-11 14:58:08 --> [Caused by] mysqli_sql_exception: Can't create database 'siput'; database exists
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('CREATE DATABASE `siput` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('CREATE DATABASE `siput` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE DATABASE `siput` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci')
+ 4 SYSTEMPATH\Database\Forge.php(237): CodeIgniter\Database\BaseConnection->query('CREATE DATABASE `siput` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci')
+ 5 APPPATH\Config\Routes.php(14): CodeIgniter\Database\Forge->createDatabase('siput')
+ 6 SYSTEMPATH\CodeIgniter.php(877): CodeIgniter\Router\RouteCollection->{closure}()
+ 7 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\siput_umkm\\public\\index.php')
+ERROR - 2024-05-11 15:24:51 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'NOT NULL,
+	CONSTRAINT `pk_umkm` PRIMARY KEY(`nik`)
+) DEFAULT CHARACTER SET = ...' at line 5 in C:\xampp\htdocs\siput_umkm\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\siput_umkm\system\Database\MySQLi\Connection.php(308): mysqli->query('CREATE TABLE `u...', 0)
+#1 C:\xampp\htdocs\siput_umkm\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `u...')
+#2 C:\xampp\htdocs\siput_umkm\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `u...')
+#3 C:\xampp\htdocs\siput_umkm\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `u...')
+#4 C:\xampp\htdocs\siput_umkm\app\Database\Migrations\2024-05-11-150205_Umkm.php(32): CodeIgniter\Database\Forge->createTable('umkm')
+#5 C:\xampp\htdocs\siput_umkm\system\Database\MigrationRunner.php(867): App\Database\Migrations\Umkm->up()
+#6 C:\xampp\htdocs\siput_umkm\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\siput_umkm\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\siput_umkm\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\siput_umkm\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\siput_umkm\system\Boot.php(338): CodeIgniter\CLI\Console->run()
+#11 C:\xampp\htdocs\siput_umkm\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\xampp\htdocs\siput_umkm\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2024-05-11 15:26:56 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'NOT NULL,
+	CONSTRAINT `pk_umkm` PRIMARY KEY(`nik`)
+) DEFAULT CHARACTER SET = ...' at line 5 in C:\xampp\htdocs\siput_umkm\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\siput_umkm\system\Database\MySQLi\Connection.php(308): mysqli->query('CREATE TABLE `u...', 0)
+#1 C:\xampp\htdocs\siput_umkm\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `u...')
+#2 C:\xampp\htdocs\siput_umkm\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `u...')
+#3 C:\xampp\htdocs\siput_umkm\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `u...')
+#4 C:\xampp\htdocs\siput_umkm\app\Database\Migrations\2024-05-11-150205_Umkm.php(32): CodeIgniter\Database\Forge->createTable('umkm')
+#5 C:\xampp\htdocs\siput_umkm\system\Database\MigrationRunner.php(867): App\Database\Migrations\Umkm->up()
+#6 C:\xampp\htdocs\siput_umkm\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\siput_umkm\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\siput_umkm\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\siput_umkm\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\siput_umkm\system\Boot.php(338): CodeIgniter\CLI\Console->run()
+#11 C:\xampp\htdocs\siput_umkm\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\xampp\htdocs\siput_umkm\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2024-05-11 15:27:32 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'NULL,
+	CONSTRAINT `pk_umkm` PRIMARY KEY(`nik`)
+) DEFAULT CHARACTER SET = utf8...' at line 5 in C:\xampp\htdocs\siput_umkm\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\siput_umkm\system\Database\MySQLi\Connection.php(308): mysqli->query('CREATE TABLE `u...', 0)
+#1 C:\xampp\htdocs\siput_umkm\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `u...')
+#2 C:\xampp\htdocs\siput_umkm\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `u...')
+#3 C:\xampp\htdocs\siput_umkm\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `u...')
+#4 C:\xampp\htdocs\siput_umkm\app\Database\Migrations\2024-05-11-150205_Umkm.php(32): CodeIgniter\Database\Forge->createTable('umkm')
+#5 C:\xampp\htdocs\siput_umkm\system\Database\MigrationRunner.php(867): App\Database\Migrations\Umkm->up()
+#6 C:\xampp\htdocs\siput_umkm\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\siput_umkm\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\siput_umkm\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\siput_umkm\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\siput_umkm\system\Boot.php(338): CodeIgniter\CLI\Console->run()
+#11 C:\xampp\htdocs\siput_umkm\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\xampp\htdocs\siput_umkm\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2024-05-11 15:28:13 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'NULL,
+	CONSTRAINT `pk_umkm` PRIMARY KEY(`nik`)
+) DEFAULT CHARACTER SET = utf8...' at line 5 in C:\xampp\htdocs\siput_umkm\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\siput_umkm\system\Database\MySQLi\Connection.php(308): mysqli->query('CREATE TABLE `u...', 0)
+#1 C:\xampp\htdocs\siput_umkm\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `u...')
+#2 C:\xampp\htdocs\siput_umkm\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `u...')
+#3 C:\xampp\htdocs\siput_umkm\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `u...')
+#4 C:\xampp\htdocs\siput_umkm\app\Database\Migrations\2024-05-11-150205_Umkm.php(32): CodeIgniter\Database\Forge->createTable('umkm')
+#5 C:\xampp\htdocs\siput_umkm\system\Database\MigrationRunner.php(867): App\Database\Migrations\Umkm->up()
+#6 C:\xampp\htdocs\siput_umkm\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\siput_umkm\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\siput_umkm\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\siput_umkm\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\siput_umkm\system\Boot.php(338): CodeIgniter\CLI\Console->run()
+#11 C:\xampp\htdocs\siput_umkm\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\xampp\htdocs\siput_umkm\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2024-05-11 15:29:17 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'NULL,
+	CONSTRAINT `pk_umkm` PRIMARY KEY(`nik`)
+) DEFAULT CHARACTER SET = utf8...' at line 6 in C:\xampp\htdocs\siput_umkm\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\siput_umkm\system\Database\MySQLi\Connection.php(308): mysqli->query('CREATE TABLE `u...', 0)
+#1 C:\xampp\htdocs\siput_umkm\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `u...')
+#2 C:\xampp\htdocs\siput_umkm\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `u...')
+#3 C:\xampp\htdocs\siput_umkm\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `u...')
+#4 C:\xampp\htdocs\siput_umkm\app\Database\Migrations\2024-05-11-150205_Umkm.php(36): CodeIgniter\Database\Forge->createTable('umkm')
+#5 C:\xampp\htdocs\siput_umkm\system\Database\MigrationRunner.php(867): App\Database\Migrations\Umkm->up()
+#6 C:\xampp\htdocs\siput_umkm\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\siput_umkm\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\siput_umkm\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\siput_umkm\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\siput_umkm\system\Boot.php(338): CodeIgniter\CLI\Console->run()
+#11 C:\xampp\htdocs\siput_umkm\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\xampp\htdocs\siput_umkm\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2024-05-11 15:31:47 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'NULL,
+	CONSTRAINT `pk_umkm` PRIMARY KEY(`id_umkm`)
+) DEFAULT CHARACTER SET = ...' at line 6 in C:\xampp\htdocs\siput_umkm\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\siput_umkm\system\Database\MySQLi\Connection.php(308): mysqli->query('CREATE TABLE `u...', 0)
+#1 C:\xampp\htdocs\siput_umkm\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `u...')
+#2 C:\xampp\htdocs\siput_umkm\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `u...')
+#3 C:\xampp\htdocs\siput_umkm\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `u...')
+#4 C:\xampp\htdocs\siput_umkm\app\Database\Migrations\2024-05-11-150205_Umkm.php(36): CodeIgniter\Database\Forge->createTable('umkm')
+#5 C:\xampp\htdocs\siput_umkm\system\Database\MigrationRunner.php(867): App\Database\Migrations\Umkm->up()
+#6 C:\xampp\htdocs\siput_umkm\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\siput_umkm\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\siput_umkm\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\siput_umkm\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\siput_umkm\system\Boot.php(338): CodeIgniter\CLI\Console->run()
+#11 C:\xampp\htdocs\siput_umkm\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\xampp\htdocs\siput_umkm\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+INFO - 2024-05-11 15:46:32 --> REDIRECTED ROUTE at http://localhost:8080/home
+INFO - 2024-05-11 15:46:36 --> REDIRECTED ROUTE at http://localhost:8080/home
