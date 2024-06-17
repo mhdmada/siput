@@ -30,7 +30,19 @@
             <div class="card card-primary">
               <div class="card-header"><h4>Login</h4></div>
 
+              <!-- alert success register  -->
               <div class="card-body">
+              <?php if(session()->getFlashData('success')) : ?>
+                 <div class="alert alert-success alert-dismissible show fade">
+                    <div class="alert-body">
+                        <button class="close" data-dismiss="alert">x</button>
+                        <b>Success !</b>
+                        <?=session()->getFlashData('success')?>
+                    </div>
+                 </div> 
+              <?php endif; ?>
+                
+              <!-- alert failed to login  -->
               <?php if(session()->getFlashData('error')) : ?>
                  <div class="alert alert-danger alert-dismissible show fade">
                     <div class="alert-body">
