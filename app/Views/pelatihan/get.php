@@ -47,6 +47,8 @@
                           <th>Nama Pelatihan</th>
                           <th>Jadwal Pelatihan</th>
                           <th>Lokasi Pelatihan</th>
+                          <th>Link Pendaftaran</th>
+                          <th>Deskripsi Pelatihan</th>
                           <th>Action</th>
                         </tr>
                         <?php foreach ($pelatihan as $key => $value) :?>
@@ -55,6 +57,8 @@
                           <td><?=$value->nama_pelatihan?></td>
                           <td><?=date('d/m/Y', strtotime($value->jadwal_pelatihan))?></td>
                           <td><?=$value->lokasi_pelatihan?></td>
+                          <td><a href=link><?=$value->link_pendaftaran?></a></td>
+                          <td><?=$value->deskripsi_pelatihan?></td>
                           <td class ="text-center" style="width:10%">
                           <a href="<?=site_url('pelatihan/edit/'.$value->id_pelatihan)?>" class="btn btn-warning btn-sm"><i class = "fas fa-pencil-alt"></i></a>
                             <form action="<?=site_url('pelatihan/'.$value->id_pelatihan)?>" method="post" class="d-inline" onsubmit="return confirm('Yakin hapus Data?')">

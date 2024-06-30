@@ -35,6 +35,14 @@
                         <label>Lokasi Pelatihan *</label>
                         <input type="text" name="lokasi_pelatihan" class="form-control" required>
                     </div>
+                    <div class="form-group">
+                        <label>Link Pendaftaran *</label>
+                        <input type="text" name="link_pendaftaran" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Deskripsi Pelatihan</label>
+                        <input type="text" name="deskripsi_pelatihan" class="form-control" required>
+                    </div>
                     <div>
                         <button type="submit" class="btn btn-success"><i class="fas fa-paper-plane"></i>Save</button>
                         <button type="reset" class="btn btn-secondary">Reset</button>

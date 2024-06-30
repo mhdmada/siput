@@ -59,6 +59,8 @@ class Pelatihan extends BaseController
             'nama_pelatihan' => $this->request->getVar('nama_pelatihan'),
             'jadwal_pelatihan' => $this->request->getVar('jadwal_pelatihan'),
             'lokasi_pelatihan' => $this->request->getVar('lokasi_pelatihan'),
+            'link_pendaftaran' => $this->request->getVar('link_pendaftaran'),
+            'deskripsi_pelatihan' => $this->request->getVar('deskripsi_pelatihan'),
         ];
         
         $this->db->table('pelatihan')->where(['id_pelatihan' => $id])->update($data);

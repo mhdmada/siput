@@ -26,6 +26,14 @@ class Pelatihan extends Migration
             'type'       => 'VARCHAR',
             'constraint' => '50',
         ],
+        'link_pendaftaran' => [
+            'type'       => 'VARCHAR',
+            'constraint' => '50',
+        ],
+        'deskripsi_pelatihan' => [
+            'type'       => 'VARCHAR',
+            'constraint' => '50',
+        ],
     ]);
     $this->forge->addKey('id_pelatihan', true);
     $this->forge->createTable('pelatihan');  
