@@ -2,16 +2,18 @@
 
 namespace App\Controllers;
 
+use App\Models\PelatihanModel;
+
 class Pelatihan extends BaseController
 {
     public function index()
     {
          //cara 1 dengan query builder
-         $builder = $this->db->table('pelatihan');
-         $query   = $builder->get();
+        //  $builder = $this->db->table('pelatihan');
+        //  $query   = $builder->get();
  
          //cara 2
-         // $query = $this->db->query("SELECT * FROM pelatihan");
+         $query = $this->db->query("SELECT * FROM pelatihan");
  
          $data['pelatihan'] = $query->getResult();
          return view('pelatihan/get', $data);
@@ -24,9 +26,33 @@ class Pelatihan extends BaseController
 
     public function store()
     {
-        $data =$this->request->getPost();
-
-        $this->db->table('pelatihan')->insert($data);
+         //include helper form
+         helper(['form']);
+         //setting rules buat validasi form
+         $rules = [
+             'nama_pelatihan' => 'required|min_length[3]|max_length[50]',
+             'jadwal_pelatihan' => 'required|date',
+             'lokasi_pelatihan' => 'required|min_length[3]|max_length[100]',
+             'link_pendaftaran' => 'required|min_length[3]|max_length[100]',
+             'deskripsi_pelatihan' => 'required|min_length[3]|max_length[225]',
+         ];
+ 
+         if ($this->validate($rules)){
+         $modelpelatihan = new PelatihanModel();
+             $datapelatihan = [
+                 'nama_pelatihan' => $this->request->getVar('nama_pelatihan'),
+                 'jadwal_pelatihan' => $this->request->getVar('jadwal_pelatihan'),
+                 'lokasi_pelatihan' => $this->request->getVar('lokasi_pelatihan'),
+                 'link_pendaftaran' => $this->request->getVar('link_pendaftaran'),
+                 'deskripsi_pelatihan' => $this->request->getVar('deskripsi_pelatihan'),
+             ];
+             $modelpelatihan->save($datapelatihan);
+ 
+         } else {
+             // redirect and show list error message 
+             $data['validation'] = $this->validator;
+             echo view('pelatihan/add', $data);
+         }
 
         if($this->db->affectedRows() > 0 ) {
             return redirect()->to(site_url('pelatihan'))->with('success', 'Data Berhasil Disimpan');

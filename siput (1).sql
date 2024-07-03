@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 30 Jun 2024 pada 16.18
+-- Waktu pembuatan: 03 Jul 2024 pada 09.27
 -- Versi server: 10.4.25-MariaDB
 -- Versi PHP: 8.1.10
 
@@ -59,18 +59,23 @@ CREATE TABLE `pelatihan` (
   `jadwal_pelatihan` date NOT NULL,
   `lokasi_pelatihan` varchar(50) NOT NULL,
   `link_pendaftaran` varchar(255) NOT NULL,
-  `deskripsi_pelatihan` longtext NOT NULL
+  `deskripsi_pelatihan` longtext NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `deleted_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data untuk tabel `pelatihan`
 --
 
-INSERT INTO `pelatihan` (`id_pelatihan`, `nama_pelatihan`, `jadwal_pelatihan`, `lokasi_pelatihan`, `link_pendaftaran`, `deskripsi_pelatihan`) VALUES
-(1, 'Tata Cara Pembuatan Izin Usaha', '2024-05-08', 'Aula Universitas Nurdin Hamzah Jambi', 'https://direktoridisnakerindonesia.wordpress.com/kota-jambi/', 'Pelatihan ini sangat berpotensi'),
-(2, 'Pembuatan Kapal Wisata', '2024-05-21', 'Danau Sipin', '', ''),
-(3, 'tutorial memasang umpan bersama iwan tegek bengkul', '2024-05-16', 'Merlung km 61', '', ''),
-(5, 'Mancing anti boncos bersama tutor danu', '2024-05-07', 'bayung lencir', '', '');
+INSERT INTO `pelatihan` (`id_pelatihan`, `nama_pelatihan`, `jadwal_pelatihan`, `lokasi_pelatihan`, `link_pendaftaran`, `deskripsi_pelatihan`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 'Tata Cara Pembuatan Izin Usaha', '2024-05-08', 'Aula Universitas Nurdin Hamzah Jambi', 'https://direktoridisnakerindonesia.wordpress.com/kota-jambi/', 'Pelatihan ini sangat berpotensi', '2024-07-03 07:26:29', '2024-07-03 07:26:29', '2024-07-03 07:26:29'),
+(2, 'Pembuatan Kapal Wisata', '2024-05-21', 'Danau Sipin', '', '', '2024-07-03 07:26:29', '2024-07-03 07:26:29', '2024-07-03 07:26:29'),
+(3, 'tutorial memasang umpan bersama iwan tegek bengkul', '2024-05-16', 'Merlung km 61', '', '', '2024-07-03 07:26:29', '2024-07-03 07:26:29', '2024-07-03 07:26:29'),
+(5, 'Mancing anti boncos bersama tutor danu', '2024-05-07', 'bayung lencir', '', '', '2024-07-03 07:26:29', '2024-07-03 07:26:29', '2024-07-03 07:26:29'),
+(6, 'Mahir Desain Grafis Bersama Udemy', '2024-07-16', 'Jambi Town Square Lantai 4', 'https://www.udemy.com/course/kelas-desain-grafis-praktis/', 'Pelatihan ini gratis tanpa harus bayar', '2024-07-03 07:26:29', '2024-07-03 07:26:29', '2024-07-03 07:26:29'),
+(7, 'Belajar Gitar Bersama Irfan', '2024-07-11', 'Bungo', 'https://www.heidisql.com/forum.php?t=41681', 'Tutor Ngab', '2024-07-03 07:26:29', '2024-07-03 07:26:29', '2024-07-03 07:26:29');
 
 -- --------------------------------------------------------
 
@@ -140,7 +145,8 @@ INSERT INTO `umkm` (`id_umkm`, `nik`, `nama`, `nama_usaha`, `alamat`, `kelurahan
 (33, 1571010102960021, 'adam', 'Ternak Tuyul', 'jl neraka firdaus', 'monyet', 'sapi', 'jl bangsat', 'Dagang', '123', '456', NULL, '7', '081229818843', '2024-06-17 06:32:51', '2024-06-17 06:32:51', '0000-00-00 00:00:00'),
 (34, 9223372036854775807, 'Mayang Sartika', 'Pempek Selam', 'Jln.Yulius Usman RT.18 No.8 Kel.Pematang Sulur Kec.Telanaipura', 'Pematang Sulur', 'Telanaipura', 'Tempino ', 'Dagang', 'GHKS91038465', '2346104372362', 'Rp.15.000.000 - Rp.20.000.000', '5', '8975563453452322', '2024-06-19 08:19:47', '2024-06-19 08:19:47', '0000-00-00 00:00:00'),
 (35, 9223372036854775807, 'Ansor Komang', 'Laode Karaoke', 'Jln Sebab kau terlalu indah', 'Lebak', 'Bandung', 'Dari Kejauhan', 'Jasa', 'wewewrrwewer42423423', 'dsfsd2342143', 'Rp.195.000.000 - Rp.200.000.000', '100', '453656457745745745754', '2024-06-25 01:01:37', '2024-06-25 01:01:37', '0000-00-00 00:00:00'),
-(36, 9223372036854775807, 'Mamat cedok', 'cedok club', 'talang bakung', 'talang', 'bakung', 'muaro jambi', 'industri', 'gfh5675765', 'gfdh54545645', '2000000', '3', '0896788568646454', '2024-06-28 12:56:15', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
+(36, 9223372036854775807, 'Mamat cedok', 'cedok club', 'talang bakung', 'talang', 'bakung', 'muaro jambi', 'industri', 'gfh5675765', 'gfdh54545645', '2000000', '3', '0896788568646454', '2024-06-28 12:56:15', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(37, 1098827267823828822, 'Hatsune Miku', 'Vocaloid INC', 'Tokyo', 'Tokyo', 'Kyoto', 'Shibuya', 'Industri', '324345454563', 'bgnfhnj5465e6565', 'Rp.95.000.000 - Rp.100.000.000', '34', '089376436473437437', '2024-07-02 21:21:19', '2024-07-02 21:21:19', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -227,7 +233,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT untuk tabel `pelatihan`
 --
 ALTER TABLE `pelatihan`
-  MODIFY `id_pelatihan` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_pelatihan` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT untuk tabel `penjualan`
@@ -239,7 +245,7 @@ ALTER TABLE `penjualan`
 -- AUTO_INCREMENT untuk tabel `umkm`
 --
 ALTER TABLE `umkm`
-  MODIFY `id_umkm` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id_umkm` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- AUTO_INCREMENT untuk tabel `users`

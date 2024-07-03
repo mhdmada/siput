@@ -23,6 +23,8 @@ class Register extends BaseController
             'username' => 'required|min_length[6]|max_length[50]',
             'password' => 'required|min_length[6]|max_length[200]',
             'password_confirmation' => 'required|min_length[6]|max_length[200]|matches[password]',
+            'bidang_usaha' => 'required|min_length[6]|max_length[50]',
+            'omzet_biaya' => 'required|min_length[6]|max_length[100]',
             'no_hp' => 'required|numeric',
         ];
 

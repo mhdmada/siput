@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-  <title>Login &mdash; SIPUTRI</title>
+  <title>Register &mdash; SIPUTRI</title>
 
   <!-- General CSS Files -->
   <link rel="stylesheet" href="<?=base_url()?>/template/node_modules/bootstrap/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -106,8 +106,9 @@
 
               <div class="form-row">
                   <div class="form-group col-md-4">
-                    <label>Bidang Usaha</label>
-                    <select class="form-control selectric" name="bidang_usaha" multiple="2" placeholder="...">
+                    <label></label>
+                    <select class="form-control selectric" name="bidang_usaha">
+                      <option>Pilih Bidang Usaha</option>
                       <option>Kuliner</option>
                       <option>Fashion</option>
                       <option>Dagang</option>
@@ -131,7 +132,8 @@
               <div class="form-row">
                     <div class="form-group col-md-4">
                         <label>Omzet Biaya</label>
-                        <select class="form-control selectric" name="omzet_biaya" multiple="2" placeholder="...">
+                        <select class="form-control selectric" name="omzet_biaya">
+                          <option></option>
                           <option>Rp.5.000.000 - Rp.10.000.000</option>
                           <option>Rp.15.000.000 - Rp.20.000.000</option>
                           <option>Rp.25.000.000 - Rp.30.000.000</option>
