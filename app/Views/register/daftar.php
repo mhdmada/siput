@@ -17,6 +17,7 @@
 </head>
 
 <body>
+<div class="hero text-black hero-bg-image" data-background="<?=base_url()?>/template/assets/img/disnakerkop2.jpg">
   <div id="app">
     <section class="section">
       <div class="container mt-5">
@@ -182,6 +183,7 @@
         </div>
       </div>
     </section>
+  </div>
   </div>
 
   <!-- General JS Scripts -->
