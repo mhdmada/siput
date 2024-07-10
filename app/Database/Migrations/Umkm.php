@@ -67,6 +67,9 @@ class Umkm extends Migration
                 'type'       => 'VARCHAR',
                 'constraint' => '50',
             ],
+            'created_at datetime default current_timestamp',
+            'updated_at datetime default current_timestamp on update current_timestamp',
+            'deleted_at datetime default current_timestamp on update current_timestamp',
         ]);
         $this->forge->addKey('id_umkm', true);
         $this->forge->createTable('umkm');

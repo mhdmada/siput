@@ -9,7 +9,7 @@ class Register extends BaseController
 {
     public function index()
     {
-        return view('register/daftar');
+        return view('auth/daftar');
     }
 
     public function save()
@@ -66,7 +66,7 @@ class Register extends BaseController
         } else {
             // redirect and show list error message 
             $data['validation'] = $this->validator;
-            echo view('register/daftar', $data);
+            echo view('auth/daftar', $data);
         }
     }
 }

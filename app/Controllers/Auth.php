@@ -26,8 +26,11 @@ class Auth extends BaseController
             if(password_verify($post['password'], $user->password)) {
                 $params = ['id_user' => $user->id_user];
                 session()->set($params);
-
-                return redirect()->to(site_url('home'));
+                if($user->roles== 'SUPER_ADMIN'){
+                    return redirect()->to(site_url('admin'));
+                } else {
+                    return redirect()->to(site_url('home'));
+                }
             } else {
                 return redirect()->back()->with('error', 'Password tidak sesuai');
             }

@@ -114,7 +114,15 @@ class Filters extends BaseFilters
                 'pelatihan',
                 'pelatihan/*',
                 'penjualan',
-                'penjualan/*'
+                'penjualan/*',
+                //admin
+                'admin',
+                'admin/umkm',
+                'admin/umkm/*',
+                'admin/pelatihan',
+                'admin/pelatihan/*',
+                'admin/penjualan',
+                'admin/penjualan/*'
             ]
         ]
     ];

@@ -15,6 +15,10 @@ class CreateUsers extends Migration
                 'unsigned'       => true,
                 'auto_increment' => true,
             ],
+            'nik' => [
+                'type'       => 'VARCHAR',
+                'constraint' => '50',
+            ],
             'name_user' => [
                 'type'       => 'VARCHAR',
                 'constraint' => '50',
@@ -27,6 +31,13 @@ class CreateUsers extends Migration
                 'type'       => 'VARCHAR',
                 'constraint' => '60',
             ],
+            'roles' => [
+                'type'       => 'VARCHAR',
+                'constraint' => '20',
+            ],
+            'created_at datetime default current_timestamp',
+            'updated_at datetime default current_timestamp on update current_timestamp',
+            'deleted_at datetime default current_timestamp on update current_timestamp',
         ]);
         $this->forge->addKey('id_user', true);
         $this->forge->createTable('users');
