@@ -40,10 +40,12 @@ $routes->get('pelatihan/edit/(:any)', 'Pelatihan::edit/$1');
 $routes->put('pelatihan/(:any)', 'Pelatihan::update/$1');
 $routes->delete('pelatihan/(:segment)', 'Pelatihan::destroy/$1');
 
-$routes->get('penjualan', 'Penjualan::index');
-$routes->get('penjualan/edit/(:any)', 'Penjualan::edit/$1');
-$routes->put('penjualan/(:any)', 'Penjualan::update/$1');
-$routes->delete('penjualan/(:segment)', 'Penjualan::destroy/$1');
+$routes->get('produk', 'Produk::index');
+$routes->get('produk/add', 'Produk::create');
+$routes->post('produk', 'Produk::store');
+$routes->get('produk/edit/(:any)', 'Produk::edit/$1');
+$routes->put('produk/(:any)', 'Produk::update/$1');
+$routes->delete('produk/(:segment)', 'Produk::destroy/$1');
 
 //admin routes
 
@@ -64,7 +66,7 @@ $routes->get('admin/pelatihan/edit/(:any)', 'AdminPelatihan::edit/$1');
 $routes->put('admin/pelatihan/(:any)', 'AdminPelatihan::update/$1');
 $routes->delete('admin/pelatihan/(:segment)', 'AdminPelatihan::destroy/$1');
 
-$routes->get('admin/penjualan', 'AdminPenjualan::index');
-$routes->get('admin/penjualan/edit/(:any)', 'AdminPenjualan::edit/$1');
-$routes->put('admin/penjualan/(:any)', 'AdminPenjualan::update/$1');
-$routes->delete('admin/penjualan/(:segment)', 'AdminPenjualan::destroy/$1');
+$routes->get('admin/produk', 'AdminProduk::index');
+$routes->get('admin/produk/edit/(:any)', 'AdminProduk::edit/$1');
+$routes->put('admin/produk/(:any)', 'AdminProduk::update/$1');
+$routes->delete('admin/produk/(:segment)', 'AdminProduk::destroy/$1');

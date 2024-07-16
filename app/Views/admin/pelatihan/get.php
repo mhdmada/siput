@@ -40,8 +40,9 @@
             <h4>Data Pelatihan UMKM</h4>
           </div>
                  <div class="card-body table-responsive">
-                      <table class="table table-striped table-md">
+                      <table class="table table-bordered">
                         <tbody>
+                        <thead class="active">
                           <tr>
                           <th>No</th>
                           <th>Nama Pelatihan</th>
@@ -51,17 +52,21 @@
                           <th>Deskripsi Pelatihan</th>
                           <th>Action</th>
                         </tr>
-                        <?php foreach ($pelatihan as $key => $value) :?>
+                        </thead>
+                        <?php 
+                        $page = isset($_GET['page']) ? $_GET['page'] : 1;
+                        $no = 1 + (5 * ($page - 1));
+                        foreach ($pelatihan as $key => $value) :?>
                         <tr>
-                          <td><?=$key + 1?></td>
-                          <td><?=$value->nama_pelatihan?></td>
-                          <td><?=date('d/m/Y', strtotime($value->jadwal_pelatihan))?></td>
-                          <td><?=$value->lokasi_pelatihan?></td>
-                          <td><a href=link><?=$value->link_pendaftaran?></a></td>
-                          <td><?=$value->deskripsi_pelatihan?></td>
+                          <td><?=$no++?></td>
+                          <td><?=$value['nama_pelatihan']?></td>
+                          <td><?=date('d/m/Y', strtotime($value['jadwal_pelatihan']))?></td>
+                          <td><?=$value['lokasi_pelatihan']?></td>
+                          <td><a href=link><?=$value['link_pendaftaran']?></a></td>
+                          <td><?=$value['deskripsi_pelatihan']?></td>
                           <td class ="text-center" style="width:10%">
-                          <a href="<?=site_url('admin/pelatihan/edit/'.$value->id_pelatihan)?>" class="btn btn-warning btn-sm"><i class = "fas fa-pencil-alt"></i></a>
-                            <form action="<?=site_url('admin/pelatihan/'.$value->id_pelatihan)?>" method="post" class="d-inline" onsubmit="return confirm('Yakin hapus Data?')">
+                          <a href="<?=site_url('admin/pelatihan/edit/'.$value['id_pelatihan'])?>" class="btn btn-warning btn-sm"><i class = "fas fa-pencil-alt"></i></a>
+                            <form action="<?=site_url('admin/pelatihan/'.$value['id_pelatihan'])?>" method="post" class="d-inline" onsubmit="return confirm('Yakin hapus Data?')">
                             <?= csrf_field() ?>
                               <input type="hidden" name="_method" value="DELETE">
                               <button class="btn btn-danger btn-sm">
@@ -73,24 +78,8 @@
                         <?php endforeach; ?>
                       </tbody>
                     </table>
+                    <?= $pager->links('default', 'pagination') ?>
                   </div>
-                  <!-- <div class="card-footer text-right">
-                    <nav class="d-inline-block">
-                      <ul class="pagination mb-0">
-                        <li class="page-item disabled">
-                          <a class="page-link" href="#" tabindex="-1"><i class="fas fa-chevron-left"></i></a>
-                        </li>
-                        <li class="page-item active"><a class="page-link" href="#">1 <span class="sr-only">(current)</span></a></li>
-                        <li class="page-item">
-                          <a class="page-link" href="#">2</a>
-                        </li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item">
-                          <a class="page-link" href="#"><i class="fas fa-chevron-right"></i></a>
-                        </li>
-                      </ul>
-                    </nav>
-                  </div> -->
                 </div>
               </div>
             </div>

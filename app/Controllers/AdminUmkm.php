@@ -15,7 +15,12 @@ class AdminUmkm extends AdminBaseController
         //cara 2
         // $query = $this->db->query("SELECT * FROM umkm");
 
-        $data['umkm'] = $query->getResult();
+        $model = model(UmkmModel::class);
+        $data = [
+            'umkm' => $model->paginate(5),
+            'pager' => $model->pager,
+        ];
+        // $data['umkm'] = $query->getResult();
         return view('admin/umkm/get', $data);
     }
 

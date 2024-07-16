@@ -1,7 +1,7 @@
 <?= $this->extend('admin/layout/default') ?>
 
 <?= $this->section('title') ?>
-<title>Home &mdash; SIPUTRI</title>
+<title>Admin &mdash; SIPUTRI</title>
 <?= $this->endSection() ?>
 
 <?= $this->section('content') ?>

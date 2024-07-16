@@ -9,13 +9,19 @@ class AdminPelatihan extends AdminBaseController
     public function index()
     {
          //cara 1 dengan query builder
-        //  $builder = $this->db->table('pelatihan');
-        //  $query   = $builder->get();
+         $builder = $this->db->table('pelatihan');
+         $query   = $builder->get();
  
          //cara 2
-         $query = $this->db->query("SELECT * FROM pelatihan");
+        //  $query = $this->db->query("SELECT * FROM pelatihan");
+
+         $model = model(PelatihanModel::class);
+        $data = [
+            'pelatihan' => $model->paginate(5),
+            'pager' => $model->pager,
+        ];
  
-         $data['pelatihan'] = $query->getResult();
+        //  $data['pelatihan'] = $query->getResult();
          return view('admin/pelatihan/get', $data);
     }
     
