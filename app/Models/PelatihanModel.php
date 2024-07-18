@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class PelatihanModel extends Model
 {
     protected $table            = 'pelatihan';
-    protected $primaryKey       = 'id';
+    protected $primaryKey       = 'id_pelatihan';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;

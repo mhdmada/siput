@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class UmkmModel extends Model
 {
     protected $table            = 'umkm';
-    protected $primaryKey       = 'id';
+    protected $primaryKey       = 'id_umkm';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;

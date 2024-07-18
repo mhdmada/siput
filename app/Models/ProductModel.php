@@ -4,15 +4,15 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class UserModel extends Model
+class ProductModel extends Model
 {
-    protected $table            = 'users';
-    protected $primaryKey       = 'id_user';
+    protected $table            = 'products';
+    protected $primaryKey       = 'id_product';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['nik','id_user','name_user','username','password','roles'];
+    protected $allowedFields    = ['caption', 'path'];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;

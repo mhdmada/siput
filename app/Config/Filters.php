@@ -113,16 +113,14 @@ class Filters extends BaseFilters
                 'umkm/*',
                 'pelatihan',
                 'pelatihan/*',
-                'produk',
-                'produk/*',
+                'product',
+                'product/*',
                 //admin
                 'admin',
                 'admin/umkm',
                 'admin/umkm/*',
                 'admin/pelatihan',
-                'admin/pelatihan/*',
-                'admin/produk',
-                'admin/produk/*'
+                'admin/pelatihan/*'
             ]
         ]
     ];

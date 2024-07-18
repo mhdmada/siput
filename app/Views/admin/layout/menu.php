@@ -10,7 +10,7 @@
         </ul>
         </li>
 <li ><a class="nav-link" href="<?=site_url('admin')?>"><i class="fas fa-pen"></i><span>Perizinan Usaha</span></a></li>
-<li ><a class="nav-link" href="<?=site_url('admin/produk')?>"><i class="fas fa-industry"></i><span>Produk UMKM</span></a></li>
+<li ><a class="nav-link" href="<?=site_url('admin')?>"><i class="fas fa-industry"></i><span>Produk UMKM</span></a></li>
 <li ><a class="nav-link" href="<?=site_url('admin')?>"><i class="far fa-newspaper"></i><span>Postingan</span></a></li>
 <li ><a class="nav-link" href="<?=site_url('admin')?>"><i class="fas fa-file-archive"></i><span>Pengajuan Berkas</span></a></li>
 <li class="nav-item dropdown">
