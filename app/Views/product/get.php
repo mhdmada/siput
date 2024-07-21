@@ -8,7 +8,7 @@
 
 <section class="section">
         <div class="section-header">
-        <h1>FOR VIEW PRODUCT</h1>
+        <h1>Etalase Produk UMKM</h1>
         </div>
 
 <?php if(session()->getFlashData('success')) : ?>

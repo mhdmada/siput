@@ -35,11 +35,31 @@
                 <?= form_open_multipart('product/store'); ?>
                 <?= csrf_field() ?>
                     <div class="form-group">
-                        <label for="image">Image</label>
+                        <label for="image">Foto Produk</label>
                         <input type="file" name="image" class="form-control">
                     </div>
                     <div class="form-group">
-                        <label for="caption">Caption</label>
+                        <label for="nama_product">Nama Produk</label>
+                        <input type="text" name="nama_product" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="nama_usaha">Nama Usaha</label>
+                        <input type="text" name="nama_usaha" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="harga_product">Harga Produk</label>
+                        <input type="text" name="harga_product" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="alamat_usaha">Alamat Toko</label>
+                        <input type="text" name="alamat_usaha" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="no_hp">Kontak</label>
+                        <input type="text" name="no_hp" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="caption">Deskripsi Produk</label>
                         <textarea name="caption" id="" cols="30" rows="10" class="form-control"></textarea>
                     </div>
                     <div class="form-group">

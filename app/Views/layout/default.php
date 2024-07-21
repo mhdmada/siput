@@ -13,6 +13,7 @@
   <!-- CSS Libraries -->
 
   <!-- Template CSS -->
+  <link rel="stylesheet" href="<?=base_url()?>/template//node_modules/summernote/dist/summernote-bs4.css">
   <link rel="stylesheet" href="<?=base_url()?>/template/assets/css/style.css">
   <link rel="stylesheet" href="<?=base_url()?>/template/assets/css/components.css">
 </head>
@@ -275,6 +276,7 @@
   </div>
 
   <!-- General JS Scripts -->
+  <script src="<?=base_url()?>/template//node_modules/summernote/dist/summernote-bs4.js"></script>
   <script src="<?=base_url()?>/template/node_modules/jquery/dist/jquery.min.js"></script>
   <script src="<?=base_url()?>/template/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="<?=base_url()?>/template/node_modules/jquery.nicescroll/dist/jquery.nicescroll.min.js"></script>

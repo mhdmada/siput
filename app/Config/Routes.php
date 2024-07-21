@@ -40,14 +40,20 @@ $routes->get('pelatihan/edit/(:any)', 'Pelatihan::edit/$1');
 $routes->put('pelatihan/(:any)', 'Pelatihan::update/$1');
 $routes->delete('pelatihan/(:segment)', 'Pelatihan::destroy/$1');
 
-// $routes->get('product', 'Product::index');
-$routes->get('product/main', 'Product::index');
+$routes->get('product', 'Product::index');
 $routes->get('product/add', 'Product::create');
 $routes->group('image', function($routes) {
-    $routes->get('product', 'Product::index');
+    $routes->get('product/get', 'Product::index');
     $routes->get('create', 'Product::create');
     $routes->post('product', 'Product::store');
 });
+
+$routes->get('perizinan', 'Perizinan::index');
+// $routes->get('perizinan/add', 'Perizinan::create');
+// $routes->post('perizinan', 'Perizinan::store');
+// $routes->get('perizinan/edit', 'Perizinan::edit/$1');
+// $routes->put('perizinan/(:any)', 'Perizinan::update/$1');
+// $routes->delete('perizinan/(:segment)', 'Perizinan::destroy/$1');
 
 //admin routes
 
@@ -70,8 +76,8 @@ $routes->delete('admin/pelatihan/(:segment)', 'AdminPelatihan::destroy/$1');
 
 $routes->get('admin/product', 'AdminProduct::index');
 $routes->get('admin/product/add', 'AdminProduct::create');
-$routes->group('image', function($routes) {
-    $routes->get('admin/product', 'AdminProduct::index');
-    $routes->get('create', 'AdminProduct::create');
+$routes->group('admin/image', function($routes) {
+    $routes->get('admin/product/get', 'AdminProduct::index');
+    $routes->get('admin/create', 'AdminProduct::create');
     $routes->post('admin/product', 'AdminProduct::store');
 });

@@ -15,6 +15,31 @@ class Product extends Migration
                 'unsigned' => TRUE,
                 'auto_increment' => TRUE
             ],
+            'nama_product' => [
+                'type' => 'VARCHAR',
+                'constraint' => 100,
+                'null' => FALSE
+            ],
+            'nama_usaha' => [
+                'type' => 'VARCHAR',
+                'constraint' => 100,
+                'null' => FALSE
+            ],
+            'harga_product' => [
+                'type' => 'VARCHAR',
+                'constraint' => 100,
+                'null' => FALSE
+            ],
+            'alamat_usaha' => [
+                'type' => 'VARCHAR',
+                'constraint' => 255,
+                'null' => FALSE
+            ],
+            'no_hp' => [
+                'type' => 'VARCHAR',
+                'constraint' => 100,
+                'null' => FALSE
+            ],
             'caption' => [
                 'type' => 'VARCHAR',
                 'constraint' => 100,

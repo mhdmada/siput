@@ -29,7 +29,7 @@ class Product extends BaseController
         ];
  
         //  $data['pelatihan'] = $query->getResult();
-         return view('product/main', $data);
+         return view('product/get', $data);
     }
 
     public function create()
@@ -40,7 +40,7 @@ class Product extends BaseController
     public function store()
     {
         if ($this->request->getMethod() !== 'POST') {
-            return redirect('product/main');
+            return redirect('product/get');
         }
 
         $validationRule = [  
@@ -56,19 +56,29 @@ class Product extends BaseController
         $validated = $this->validate($validationRule);
 
         if ($validated) {
+            $nama_product = $this->request->getVar('nama_product');
+            $nama_usaha = $this->request->getVar('nama_usaha');
+            $harga_product = $this->request->getVar('harga_product');
+            $alamat_usaha = $this->request->getVar('alamat_usaha');
+            $no_hp = $this->request->getVar('no_hp');
             $caption = $this->request->getPost('caption');
             $image = $this->request->getFile('image');
             $filename = $image->getRandomName();
             $image->move(ROOTPATH . 'public/uploads', $filename);
 
             $uploadedImage = [
+                'nama_product' => $nama_product,
+                'nama_usaha' => $nama_usaha,
+                'harga_product' => $harga_product,
+                'alamat_usaha' => $alamat_usaha,
+                'no_hp' => $no_hp,
                 'caption' => $caption,
                 'path' => $image->getName()
             ];
 
             $save = $this->model->save($uploadedImage);
             if ($save) {
-                return redirect()->to(site_url('product/main'))
+                return redirect()->to(site_url('product'))
                     ->with('success', 'Image uploaded');
             } else {
                 session()->setFlashdata('error', $this->model->errors());
