@@ -265,7 +265,7 @@
 
       <footer class="main-footer">
         <div class="footer-left">
-          Copyright &copy; 2024 <div class="bullet"></div> Developed By <a href="/">Muhammad Ziqran Febian</a>
+          Copyright &copy; 2024 <div class="bullet"></div><a href="/">Dinas Tenaga Kerja, Koperasi dan UKM Kota Jambi</a>
         </div>
         <div class="footer-right">
           1.0

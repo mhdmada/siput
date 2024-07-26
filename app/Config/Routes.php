@@ -49,11 +49,20 @@ $routes->group('image', function($routes) {
 });
 
 $routes->get('perizinan', 'Perizinan::index');
+// $routes->get('perizinan/edit/', 'Perizinan::edit/$1');
+// $routes->post('perizinan/update', 'Perizinan::update/$1');
 // $routes->get('perizinan/add', 'Perizinan::create');
 // $routes->post('perizinan', 'Perizinan::store');
-// $routes->get('perizinan/edit', 'Perizinan::edit/$1');
-// $routes->put('perizinan/(:any)', 'Perizinan::update/$1');
 // $routes->delete('perizinan/(:segment)', 'Perizinan::destroy/$1');
+
+$routes->get('pelayanan', 'Pelayanan::index');
+
+$routes->get('berkas', 'Berkas::index');
+$routes->get('berkas', 'Berkas::create');
+$routes->post('berkas', 'Berkas::save');
+// $routes->get('berkas/download/(:num)', 'Berkas::download/$1');
+
+// $routes->delete('pelatihan/(:segment)', 'Pelatihan::destroy/$1');
 
 //admin routes
 
@@ -81,3 +90,10 @@ $routes->group('admin/image', function($routes) {
     $routes->get('admin/create', 'AdminProduct::create');
     $routes->post('admin/product', 'AdminProduct::store');
 });
+
+$routes->get('admin/perizinan', 'AdminPerizinan::index');
+$routes->get('admin/perizinan/edit/', 'AdminPerizinan::edit/$1');
+$routes->post('admin/perizinan/update', 'AdminPerizinan::update/$1');
+
+$routes->get('admin/berkas', 'AdminBerkas::index');
+$routes->get('admin/berkas/download/(:num)', 'AdminBerkas::download/$1');

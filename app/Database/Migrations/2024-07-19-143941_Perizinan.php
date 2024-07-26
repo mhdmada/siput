@@ -15,23 +15,53 @@ class Perizinan extends Migration
                 'unsigned' => TRUE,
                 'auto_increment' => TRUE
             ],
-            'haki' => [
-                'type' => 'TEXT',
+            'info_1' => [
+                'type' => 'VARCHAR',
                 'constraint' => 225,
                 'null' => FALSE
             ],
-             'nib' => [
-                'type' => 'TEXT',
+             'info_2' => [
+                'type' => 'VARCHAR',
                 'constraint' => 225,
                 'null' => FALSE
             ],
-            'npwp' => [
-                'type' => 'TEXT',
+            'info_3' => [
+                'type' => 'VARCHAR',
                 'constraint' => 225,
                 'null' => FALSE
             ],
-            'p_irt' => [
-                'type' => 'TEXT',
+            'info_4' => [
+                'type' => 'VARCHAR',
+                'constraint' => 225,
+                'null' => FALSE
+            ],
+            'info_5' => [
+                'type' => 'VARCHAR',
+                'constraint' => 225,
+                'null' => FALSE
+            ],
+            'info_6' => [
+                'type' => 'VARCHAR',
+                'constraint' => 225,
+                'null' => FALSE
+            ],
+            'info_7' => [
+                'type' => 'VARCHAR',
+                'constraint' => 225,
+                'null' => FALSE
+            ],
+            'info_8' => [
+                'type' => 'VARCHAR',
+                'constraint' => 225,
+                'null' => FALSE
+            ],
+            'info_9' => [
+                'type' => 'VARCHAR',
+                'constraint' => 225,
+                'null' => FALSE
+            ],
+            'info_10' => [
+                'type' => 'VARCHAR',
                 'constraint' => 225,
                 'null' => FALSE
             ],

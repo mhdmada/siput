@@ -1,4 +1,4 @@
-<?= $this->extend('layout/default') ?>
+<?= $this->extend('admin/layout/default') ?>
 
 <?= $this->section('title') ?>
 <title>Produk &mdash; SIPUTRI</title>
@@ -16,7 +16,7 @@
         <div class="section-header-back">
           <a href="<?=site_url('admin/product')?>" class="btn"><i class= "fas fa-arrow-left"></i></a>
         </div>
-        <h1>Masukkan Produk Anda</h1>
+        <h1>Daftarkan Produk Anda</h1>
         </div>
 
 <div class="section-body">

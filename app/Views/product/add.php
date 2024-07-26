@@ -16,26 +16,33 @@
         <div class="section-header-back">
           <a href="<?=site_url('product')?>" class="btn"><i class= "fas fa-arrow-left"></i></a>
         </div>
-        <h1>Masukkan Produk Anda</h1>
+        <h1>Daftarkan Produk Anda</h1>
         </div>
 
 <div class="section-body">
         <div class="card">
         <div class="card-header">
+        <?php if (session()->getFlashdata('success')) { ?>
+                        <div class="alert alert-success">
+                            <?php echo session()->getFlashdata('success'); ?>
+                        </div>
+                    <?php } ?>
+
+                    <?php if (session()->getFlashdata('error')) { ?>
+                        <div class="alert alert-danger">
+                            <?php foreach (session()->getFlashdata('error') as $field => $error) : ?>
+                                <p><?= $error ?></p>
+                            <?php endforeach ?>
+                        </div>
+
+                    <?php } ?>
           </div>
-          <!-- show alert validation -->
-          <?php if(isset($validation)): ?>
-                <div class="form-group col-12 col-md-12">
-                    <div class="alert alert-danger" role="alert">
-                      <?php echo \Config\Services::validation()->listErrors() ?>
-                    </div>
-                </div>
-              <?php endif; ?>
                  <div class="card-body col-md-6">
                 <?= form_open_multipart('product/store'); ?>
                 <?= csrf_field() ?>
                     <div class="form-group">
-                        <label for="image">Foto Produk</label>
+                        <label for="image">Foto Produk</label><br>
+                        <label>Jenis file yang diizinkan : jpg,jpeg,gif,png,webp</label>
                         <input type="file" name="image" class="form-control">
                     </div>
                     <div class="form-group">

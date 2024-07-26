@@ -7,72 +7,15 @@
 <?= $this->section('content') ?>
 <section class="section">
         <div class="section-header">
-        <h1>Welcome</h1>
+        <marquee scrollamount="10" direction="left"><h3>Selamat Datang di Sistem Informasi Pelayanan UMKM Terintegrasi Kota Jambi - Dinas Tenaga Kerja, Koperasi dan UKM Kota Jambi</h3></marquee>
         </div>
 
          <div class="section-body">
         <div class="row">
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-              <div class="card card-statistic-1">
-                <div class="card-icon bg-primary">
-                  <i class="far fa-user"></i>
-                </div>
-                <div class="card-wrap">
-                  <div class="card-header">
-                    <h4>Total UMKM</h4>
-                  </div>
-                  <div class="card-body">
-                  12
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-              <div class="card card-statistic-1">
-                <div class="card-icon bg-danger">
-                  <i class="far fa-newspaper"></i>
-                </div>
-                <div class="card-wrap">
-                  <div class="card-header">
-                    <h4>Pelatihan UMKM</h4>
-                  </div>
-                  <div class="card-body">
-                    42
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-              <div class="card card-statistic-1">
-                <div class="card-icon bg-warning">
-                  <i class="far fa-file"></i>
-                </div>
-                <div class="card-wrap">
-                  <div class="card-header">
-                    <h4>Detail Produk UMKM</h4>
-                  </div>
-                  <div class="card-body">
-                    2
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-              <div class="card card-statistic-1">
-                <div class="card-icon bg-success">
-                  <i class="fas fa-circle"></i>
-                </div>
-                <div class="card-wrap">
-                  <div class="card-header">
-                    <h4>Online Users</h4>
-                  </div>
-                  <div class="card-body">
-                    47
-                  </div>
-                </div>
-              </div>
-            </div>
+        <div class="col-lg-12 col-md-6 col-sm-6 col-12">
+            <h3>Halaman Dashboard</h3>
           </div>
+        </div>
       </div>
      </section>
 <?= $this->endSection() ?>

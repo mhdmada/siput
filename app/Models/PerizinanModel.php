@@ -12,7 +12,7 @@ class PerizinanModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields    = ['info_1', 'info_2', 'info_3', 'info_4', 'info_5', 'info_6', 'info_7', 'info_8', 'info_9', 'info_10'];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;

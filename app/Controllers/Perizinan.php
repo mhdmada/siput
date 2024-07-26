@@ -10,16 +10,10 @@ class Perizinan extends BaseController
 {
     public function index()
     {
-         //cara 1 dengan query builder
-         $builder = $this->db->table('izin_usaha');
-         $query   = $builder->get();
- 
-         //cara 2
-        //  $query = $this->db->query("SELECT * FROM izin_usaha");
-        
- 
-         $data['izin_usaha'] = $query->getResult();
-         return view('perizinan/get', $data);
+        $PerizinanModel = new PerizinanModel();
+        $data['izin_usaha'] = $PerizinanModel->orderBy('id_izin', 'ASC')->findAll();
+
+        return view('perizinan/get', $data);
     }
 
     // public function create()
@@ -60,19 +54,12 @@ class Perizinan extends BaseController
     //     }
     // }
 
-    // public function edit($id = null)
+    // public function edit($id)
     // {
-    //     if($id != null){
-    //         $query = $this->db->table('izin_usaha')->getWhere(['id_izin' => $id]);
-    //         if($query->resultID->num_rows > 0) {
-    //             $data['izin_usaha'] = $query->getRow();
-    //             return view('perizinan/edit', $data);
-    //         } else {
-    //             throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
-    //         }
-    //     } else {
-    //         throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
-    //     }
+    //     $PerizinanModel = new PerizinanModel();
+    //     $data['izin'] = $PerizinanModel->find($id);
+
+    //     return view('perizinan/edit', $data);
     // }
 
     // public function update($id)
@@ -82,14 +69,22 @@ class Perizinan extends BaseController
     //     // unset($data['_method']);
 
     //     //  cara 2 : name spesifik
+    //     $PerizinanModel = new PerizinanModel();
+    //     $id = $this->request->getVar('id_izin');
     //     $data = [
-    //         'haki' => $this->request->getVar('haki'),
-    //         'nib' => $this->request->getVar('nib'),
-    //         'npwp' => $this->request->getVar('npwp'),
-    //         'p_irt' => $this->request->getVar('p_irt'),
+    //         'info_1' => $this->request->getVar('info_1'),
+    //         'info_2' => $this->request->getVar('info_2'),
+    //         'info_3' => $this->request->getVar('info_3'),
+    //         'info_4' => $this->request->getVar('info_4'),
+    //         'info_5' => $this->request->getVar('info_5'),
+    //         'info_6' => $this->request->getVar('info_6'),
+    //         'info_7' => $this->request->getVar('info_7'),
+    //         'info_8' => $this->request->getVar('info_8'),
+    //         'info_9' => $this->request->getVar('info_9'),
+    //         'info_10' => $this->request->getVar('info_10')
     //     ];
-        
-    //     $this->db->table('izin_usaha')->where(['id_izin' => $id])->update($data);
+    //     $PerizinanModel->update($id, $data);
+
     //     return redirect()->to(site_url('perizinan'))->with('success', 'Data Berhasil Diupdate');
     // }
 
