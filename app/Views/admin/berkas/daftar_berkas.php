@@ -1,7 +1,7 @@
-<?= $this->extend('layout/default') ?>
+<?= $this->extend('admin/layout/default') ?>
 
 <?= $this->section('title') ?>
-<title>Kirim Berkas &mdash; SIPUTRI</title>
+<title>Berkas Masuk &mdash; SIPUTRI</title>
 <?= $this->endSection() ?>
 
 <?= $this->section('content') ?>
@@ -45,7 +45,8 @@
                             <th>Nama Dokumen</th>
                             <th>Keterangan</th>
                             <th>Pengirim</th>
-                            <th>Opsi</th>
+                            <th>Unduh Berkas</th>
+                            <th>Hapus</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -58,7 +59,18 @@
                                 <td><?= $row['berkas'] ?></td>
                                 <td><?= $row['keterangan'] ?></td>
                                 <td><?= $row['nama'] ?></td>
-                                <td><a class="btn btn-info" href="<?=site_url('admin/berkas/download/'); ?><?= $row['id_berkas'] ?>">Unduh</a></td>
+                                <td class ="text-center" style="width:10%">
+                                <a href="<?=site_url('adminberkas/download/'); ?><?= $row['id_berkas'] ?>" class="btn btn-info" ><i class = "fas fa-download"></i></a>
+                                </td>
+                                <td class ="text-center" style="width:10%">
+                                <form action="<?=site_url('adminberkas/destroy/'.$row['id_berkas'])?>" method="post" class="d-inline" onsubmit="return confirm('Yakin hapus Data?')">
+                                <?= csrf_field() ?>
+                                  <input type="hidden" name="_method" value="DELETE">
+                                  <button class="btn btn-danger btn-sm">
+                                  <i class = "fas fa-trash"></i>
+                                </button>
+                                </form>
+                                </td>
                             </tr>
                         <?php
                         }

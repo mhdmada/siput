@@ -8,7 +8,7 @@
 
 <section class="section">
         <div class="section-header">
-        <h1>Produk UMKM Anda</h1>
+        <h1>Data Produk UMKM</h1>
         </div>
 
 <?php if(session()->getFlashData('success')) : ?>
@@ -35,7 +35,7 @@
 
         <div class="card">
               <div class="card-header">
-                <h4>Info</h4>
+                <h4>Daftar Info Produk</h4>
               </div>
                   <div class="card-body">
                     <table class="table table-bordered">
@@ -50,6 +50,7 @@
                         <th>Alamat Toko</th>
                         <th>Kontak</th>
                         <th>Deskripsi Produk</th>
+                        <th>Opsi</th>
                       </tr>
                       </thead>
                       <?php 
@@ -58,13 +59,23 @@
                         foreach ($products as $key => $value) :?>
                         <tr>
                           <td><?=$no++?></td>
-                          <td><img src="<?=site_url('uploads/' . $value['path']); ?> "class="img" style="height: 100px; width:100%; cover:fit"></td>
+                          <td><img src="<?=site_url('uploads/' . $value['path']); ?>" class="img-thumbnail mt-2" style="height: 100px;"></td>
                           <td><?=$value['nama_product']?></td>
                           <td><?=$value['nama_usaha']?></td>
                           <td><?=$value['harga_product']?></td>
                           <td><?=$value['alamat_usaha']?></td>
                           <td><?=$value['no_hp']?></td>
                           <td><?=$value['caption']?></td>
+                          <td class ="text-center" style="width:10%">
+                          <a href="<?=site_url('admin/product/edit/'.$value['id_product'])?>" class="btn btn-warning btn-sm"><i class = "fas fa-pencil-alt"></i></a>
+                            <form action="<?=site_url('admin/product/'.$value['id_product'])?>" method="post" class="d-inline" onsubmit="return confirm('Yakin hapus Data?')">
+                            <?= csrf_field() ?>
+                              <input type="hidden" name="_method" value="DELETE">
+                              <button class="btn btn-danger btn-sm">
+                                <i class = "fas fa-trash"></i>
+                              </button>
+                            </form>
+                          </td>
                           </td>
                         </tr>
                         <?php endforeach; ?>
@@ -75,7 +86,7 @@
                   <div class="card-footer">
                   <div class="buttons">
                     <a href="<?=site_url('admin/product/add'); ?>" class="btn btn-primary">
-                        Daftar sekarang juga
+                        Tambah Data Produk
                     </a>
                     </div>
                   </div>

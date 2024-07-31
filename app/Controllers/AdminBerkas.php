@@ -33,4 +33,25 @@ class AdminBerkas extends BaseController
 
         return $this->response->download('uploads/berkas/' . $data['berkas'], null);
 	}
+
+    public function destroy($id)
+    {
+        $berkasModel = new BerkasModel();
+        $berkas = $berkasModel->find($id);
+
+        if ($berkas) {
+         $filePath = 'uploads/berkas/' . $berkas['berkas'];
+        if (file_exists($filePath)) {
+            unlink($filePath);
+        }
+
+        $berkasModel->delete($id);
+
+        session()->setFlashdata('success', 'Berkas berhasil dihapus');
+        } else {
+        session()->setFlashdata('error', 'Berkas tidak ditemukan');
+        }
+
+        return redirect()->to(site_url('admin/berkas'));
+    }
 }

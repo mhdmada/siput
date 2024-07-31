@@ -79,7 +79,7 @@ class AdminProduct extends AdminBaseController
             $save = $this->model->save($uploadedImage);
             if ($save) {
                 return redirect()->to(site_url('admin/product'))
-                    ->with('success', 'Image uploaded');
+                    ->with('success', 'Data berhasil ditambahkan');
             } else {
                 session()->setFlashdata('error', $this->model->errors());
                 return redirect()->back();
@@ -89,6 +89,98 @@ class AdminProduct extends AdminBaseController
 
         session()->setFlashdata('error', $this->validator->getErrors());
         return redirect()->back();
-
     }
+
+    public function edit($id)
+    {
+        $data['products'] = $this->model->find($id);
+
+        return view('admin/product/edit', $data);
+    }
+
+    public function update($id)
+    {
+        if ($this->request->getMethod() !== 'POST') {
+            return redirect('admin/product');
+        }
+
+        $validationRule = [  
+            'image' => [  
+                'label' => 'Image File',  
+                'rules' => 'is_image[image]'  
+                    . '|mime_in[image,image/jpg,image/jpeg,image/gif,image/png,image/webp]'  
+                    . '|max_size[image,1000]'  
+                    . '|max_dims[image,4000,4000]',  
+            ],  
+        ];
+        $validated = $this->validate($validationRule);
+
+        if ($validated) {
+            $nama_product = $this->request->getVar('nama_product');
+            $nama_usaha = $this->request->getVar('nama_usaha');
+            $harga_product = $this->request->getVar('harga_product');
+            $alamat_usaha = $this->request->getVar('alamat_usaha');
+            $no_hp = $this->request->getVar('no_hp');
+            $caption = $this->request->getPost('caption');
+            $image = $this->request->getFile('image');
+
+            if ($image->isValid() && !$image->hasMoved()) {
+                $filename = $image->getRandomName();
+                $image->move(ROOTPATH . 'public/uploads', $filename);
+                $path = $image->getName();
+            } else {
+                $path = $this->request->getVar('old_image');
+            }
+
+            $updatedData = [
+                'nama_product' => $nama_product,
+                'nama_usaha' => $nama_usaha,
+                'harga_product' => $harga_product,
+                'alamat_usaha' => $alamat_usaha,
+                'no_hp' => $no_hp,
+                'caption' => $caption,
+                'path' => $path
+            ];
+
+            $update = $this->model->update($id, $updatedData);
+            if ($update) {
+                return redirect()->to(site_url('admin/product'))
+                    ->with('success', 'Data berhasil diupdate');
+            } else {
+                session()->setFlashdata('error', $this->model->errors());
+                return redirect()->back();
+            }
+
+        }
+
+        session()->setFlashdata('error', $this->validator->getErrors());
+        return redirect()->back();
+    }
+
+    public function destroy($id)
+    {
+    // Get existing product data
+    $existingProduct = $this->model->find($id);
+    if ($existingProduct) {
+        // Delete old image
+        $oldImagePath = ROOTPATH . 'public/uploads/' . $existingProduct['path'];
+        if (file_exists($oldImagePath)) {
+            unlink($oldImagePath);
+        }
+
+        // Delete product from database
+        $delete = $this->model->delete($id);
+        if ($delete) {
+            return redirect()->to(site_url('admin/product'))
+                ->with('success', 'Data Berhasil Dihapus');
+        } else {
+            session()->setFlashdata('error', 'Failed to delete product');
+            return redirect()->back();
+        }
+        } else {
+        session()->setFlashdata('error', 'Product not found');
+        return redirect()->back();
+        }
+    }
+
 }

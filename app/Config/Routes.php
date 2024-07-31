@@ -20,6 +20,9 @@ $routes->setAutoRoute(true);
 
 $routes->get('login', 'Auth::login');
 
+
+//==================== USER ROUTES ====================
+
 $routes->get('/', 'Home::index');
 // $routes->addRedirect('/', 'home');
 
@@ -55,7 +58,11 @@ $routes->get('perizinan', 'Perizinan::index');
 // $routes->post('perizinan', 'Perizinan::store');
 // $routes->delete('perizinan/(:segment)', 'Perizinan::destroy/$1');
 
-$routes->get('pelayanan', 'Pelayanan::index');
+$routes->get('pelatihan_dinas', 'PelatihanDinas::index');
+$routes->get('pelatihan_dinas/persyaratan', 'PelatihanDinas::persyaratan');
+$routes->get('pelatihan_dinas/daftar', 'PelatihanDinas::daftar');
+$routes->post('pelatihan_dinas/save', 'PelatihanDinas::save');
+$routes->get('pelatihan_dinas/berhasil_daftar', 'PelatihanDinas::berhasil');
 
 $routes->get('berkas', 'Berkas::index');
 $routes->get('berkas', 'Berkas::create');
@@ -64,7 +71,7 @@ $routes->post('berkas', 'Berkas::save');
 
 // $routes->delete('pelatihan/(:segment)', 'Pelatihan::destroy/$1');
 
-//admin routes
+//================== ADMIN ROUTES ==================
 
 $routes->get('/', 'Admin::index');
 // $routes->addRedirect('/', 'admin/home');
@@ -85,10 +92,14 @@ $routes->delete('admin/pelatihan/(:segment)', 'AdminPelatihan::destroy/$1');
 
 $routes->get('admin/product', 'AdminProduct::index');
 $routes->get('admin/product/add', 'AdminProduct::create');
+$routes->get('admin/product/edit/(:segment)', 'AdminProduct::edit/$1');
+$routes->post('admin/product/update/(:segment)', 'AdminProduct::update/$1');
+$routes->delete('admin/product/(:segment)', 'AdminProduct::destroy/$1');
 $routes->group('admin/image', function($routes) {
     $routes->get('admin/product/get', 'AdminProduct::index');
     $routes->get('admin/create', 'AdminProduct::create');
     $routes->post('admin/product', 'AdminProduct::store');
+
 });
 
 $routes->get('admin/perizinan', 'AdminPerizinan::index');
@@ -97,3 +108,10 @@ $routes->post('admin/perizinan/update', 'AdminPerizinan::update/$1');
 
 $routes->get('admin/berkas', 'AdminBerkas::index');
 $routes->get('admin/berkas/download/(:num)', 'AdminBerkas::download/$1');
+$routes->get('admin/berkas/destroy/(:num)', 'AdminBerkas::destroy/$1');
+
+$routes->get('admin/syarat_pelatihan', 'AdminSyaratPelatihan::index');
+$routes->get('admin/syarat_pelatihan/edit/(:segment)', 'AdminSyaratPelatihan::edit/$1');
+$routes->post('admin/syarat_pelatihan/update/(:segment)', 'AdminSyaratPelatihan::update/$1');
+
+$routes->get('admin/pendaftar', 'AdminPendaftaran::index');

@@ -6,7 +6,7 @@
 <a href="#" class="nav-link has-dropdown"><i class="fas fa-info-circle"></i> <span>Pelatihan</span></a>
         <ul class="dropdown-menu">
             <li><a class="nav-link" href="<?=site_url('pelatihan')?>">Info Pelatihan</a></li>
-            <li><a class="nav-link" href="<?=site_url('pelayanan')?>">Daftar Pelatihan</a></li>
+            <li><a class="nav-link" href="<?=site_url('pelatihan_dinas')?>">Daftar Pelatihan</a></li>
         </ul>
         </li>
 <!-- <li ><a class="nav-link" href="<?=site_url('pelatihan')?>"><i class="fas fa-info-circle"></i><span>Info Pelatihan</span></a></li> -->

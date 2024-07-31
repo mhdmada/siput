@@ -7,7 +7,7 @@
 <?= $this->section('content') ?>
 <section class="section">
         <div class="section-header">
-        <h1>Welcome</h1>
+        <marquee scrollamount="10" direction="left"><h3>Selamat Datang Admin SIPUTRI (Sistem Informasi Pelayanan UMKM TeRIntegrasi Kota Jambi) - Dinas Tenaga Kerja, Koperasi dan UKM Kota Jambi</h3></marquee>
         </div>
 
          <div class="section-body">

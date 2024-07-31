@@ -9,18 +9,45 @@ class AdminUmkm extends AdminBaseController
     public function index()
     {
         //cara 1 dengan query builder
-        $builder = $this->db->table('umkm');
-        $query   = $builder->get();
+        // $builder = $this->db->table('umkm');
+        // $query   = $builder->get();
 
         //cara 2
         // $query = $this->db->query("SELECT * FROM umkm");
 
         $model = model(UmkmModel::class);
+
+        // Ambil keyword dari input pencarian
+        $keyword = $this->request->getVar('keyword');
+        
+        // Cek apakah ada keyword yang diinputkan
+        if ($keyword) {
+            $model->like('nik', $keyword)
+                  ->orLike('nama', $keyword)
+                  ->orLike('nama_usaha', $keyword)
+                  ->orLike('alamat', $keyword)
+                  ->orLike('kelurahan', $keyword)
+                  ->orLike('kecamatan', $keyword)
+                  ->orLike('alamat_usaha', $keyword)
+                  ->orLike('bidang_usaha', $keyword)
+                  ->orLike('nib', $keyword)
+                  ->orLike('npwp', $keyword)
+                  ->orLike('omzet_biaya', $keyword)
+                  ->orLike('jumlah_tenaga_kerja', $keyword)
+                  ->orLike('no_hp', $keyword);
+        }
+
+        // Hitung total hasil pencarian
+        $totalResults = $model->countAllResults(false);
+
         $data = [
             'umkm' => $model->paginate(5),
             'pager' => $model->pager,
+            'keyword' => $keyword, // Tambahkan keyword ke data untuk dikirim ke view
+            'noResults' => ($totalResults == 0), // Cek jika tidak ada hasil
+            'totalResults' => $totalResults // Kirim total hasil pencarian ke view
         ];
-        // $data['umkm'] = $query->getResult();
+
         return view('admin/umkm/get', $data);
     }
 
