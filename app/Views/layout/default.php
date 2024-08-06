@@ -219,7 +219,7 @@
           </li>
           <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
             <img alt="image" src="<?=base_url()?>/template/assets/img/avatar/avatar-1.png" class="rounded-circle mr-1">
-            <div class="d-sm-none d-lg-inline-block"> Halo,</div></a>
+            <div class="d-sm-none d-lg-inline-block"> Halo, User</div></a>
             <div class="dropdown-menu dropdown-menu-right">
               <div class="dropdown-title">Logged in 5 min ago</div>
               <a href="features-profile.html" class="dropdown-item has-icon">
@@ -242,7 +242,7 @@
       <div class="main-sidebar">
         <aside id="sidebar-wrapper">
           <div class="sidebar-brand">
-            <a href="<?=site_url()?>"><img src="<?=base_url()?>/template/assets/img/kota_jambi.png" alt="logo" width="20" class="shadow-light rounded-square">&nbsp;SIPUTRI</a>
+            <a href="<?=site_url()?>"><img src="<?=base_url()?>/template/assets/img/kota_jambi.png" alt="logo" width="20">&nbsp;SIPUTRI</a>
           </div>
           <div class="sidebar-brand sidebar-brand-sm">
             <a href="<?=site_url()?>">Siputri</a>
@@ -250,12 +250,6 @@
           <ul class="sidebar-menu">
               <?= $this->include('layout/menu') ?>
             </ul>
-
-            <!-- <div class="mt-4 mb-4 p-3 hide-sidebar-mini">
-              <a href="" class="btn btn-primary btn-sm btn-block btn-icon-split">
-                <i class="fas fa-rocket"></i> Upgrade to Pro
-              </a>
-            </div> -->
         </aside>
       </div>
 

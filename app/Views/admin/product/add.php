@@ -32,7 +32,7 @@
                 </div>
               <?php endif; ?>
                  <div class="card-body col-md-6">
-                <?= form_open_multipart('adminproduct/store'); ?>
+                 <form action="<?= site_url('admin/product/store'); ?>" method="post" enctype="multipart/form-data">
                 <?= csrf_field() ?>
                     <div class="form-group">
                         <label for="image">Gambar Produk</label>

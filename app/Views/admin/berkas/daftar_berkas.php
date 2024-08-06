@@ -32,12 +32,23 @@
 
 <div class="section-body">
         <div class="card">
-
-        <div class="card">
               <div class="card-header">
                 <h4>List dokumen yang masuk</h4>
               </div>
-                  <div class="card-body">
+              <div class="card-header">
+            <form action="" method="get" autocomplete="off">
+              <div class="float-left">
+                <input type="text" name="keyword" value="<?= isset($keyword) ? $keyword : '' ?>" class="form-control" style="width:155pt;" placeholder="Cari Data">
+              </div>
+              <div class="float-right ml-2">
+                <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>
+              </div>
+            </form>
+          </div>
+                  <div class="card-body table-responsive">
+                  <?php if($noResults): ?>
+                  <h6>Tidak ada hasil.</h6>
+                  <?php else: ?>
                 <table class="table table-bordered">
                     <thead>
                         <tr>
@@ -79,10 +90,12 @@
                 </table>
                   </div>
                   <div class="card-footer">
-                    <?= $pager->links('default', 'pagination') ?>
+                  <?php if ($pager->getPageCount() > 1): ?>
+                      <?= $pager->links('default', 'pagination') ?>
+                    <?php endif; ?>
+                    <?php endif; ?>
                   </div>  
                   </div>
-                </div>
               </div>
             </div>
           </div>

@@ -29,6 +29,8 @@ $routes->get('/', 'Home::index');
 $routes->get('auth', 'Register::index');
 $routes->put('auth/(:any)', 'Register::save');
 
+$routes->get('home', 'Dashboard::index');
+
 $routes->get('umkm', 'Umkm::index');
 $routes->get('umkm/add', 'Umkm::create');
 $routes->post('umkm', 'Umkm::store');
@@ -92,6 +94,7 @@ $routes->delete('admin/pelatihan/(:segment)', 'AdminPelatihan::destroy/$1');
 
 $routes->get('admin/product', 'AdminProduct::index');
 $routes->get('admin/product/add', 'AdminProduct::create');
+$routes->post('admin/product/store', 'AdminProduct::store');
 $routes->get('admin/product/edit/(:segment)', 'AdminProduct::edit/$1');
 $routes->post('admin/product/update/(:segment)', 'AdminProduct::update/$1');
 $routes->delete('admin/product/(:segment)', 'AdminProduct::destroy/$1');
@@ -115,3 +118,23 @@ $routes->get('admin/syarat_pelatihan/edit/(:segment)', 'AdminSyaratPelatihan::ed
 $routes->post('admin/syarat_pelatihan/update/(:segment)', 'AdminSyaratPelatihan::update/$1');
 
 $routes->get('admin/pendaftar', 'AdminPendaftaran::index');
+
+$routes->get('admin/laporan', 'AdminLaporan::index');
+$routes->get('admin/laporan/export', 'AdminLaporan::export');
+
+$routes->get('admin/rekap_laporan', 'AdminRekapLaporan::index');
+$routes->get('admin/rekap_laporan/export', 'AdminRekapLaporan::export');
+
+$routes->get('admin/rekap', 'AdminRekap::index');
+$routes->get('admin/rekap/add', 'AdminRekap::create');
+$routes->post('admin/rekap/store', 'AdminRekap::store');
+$routes->get('admin/rekap/edit/(:segment)', 'AdminRekap::edit/$1');
+$routes->post('admin/rekap/update/(:segment)', 'AdminRekap::update/$1');
+$routes->post('admin/rekap/destroy/(:segment)', 'AdminRekap::destroy/$1');
+
+$routes->get('admin/artikel', 'AdminArtikel::index');
+$routes->get('admin/artikel/add', 'AdminArtikel::create');
+$routes->post('admin/artikel/store', 'AdminArtikel::store');
+$routes->get('admin/artikel/edit/(:segment)', 'AdminArtikel::edit/$1');
+$routes->post('admin/artikel/update/(:segment)', 'AdminArtikel::update/$1');
+$routes->post('admin/artikel/destroy/(:segment)', 'AdminArtikel::destroy/$1');

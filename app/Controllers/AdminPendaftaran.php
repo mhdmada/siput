@@ -13,10 +13,28 @@ class AdminPendaftaran extends BaseController
         $model = new PendaftaranModel();
 		$data['pendaftaran'] = $model->findAll();
 
+        // Ambil keyword dari input pencarian
+        $keyword = $this->request->getVar('keyword');
+        
+        // Cek apakah ada keyword yang diinputkan
+        if ($keyword) {
+            $model->like('nama_lengkap', $keyword)
+                  ->orLike('file_ktp', $keyword)
+                  ->orLike('file_kk', $keyword)
+                  ->orLike('file_nib', $keyword)
+                  ->orLike('file_npwp', $keyword);
+        }
+
+        // Hitung total hasil pencarian
+        $totalResults = $model->countAllResults(false);
+
 		$model = model(PendaftaranModel::class);
         $data = [
             'pendaftaran' => $model->paginate(10),
             'pager' => $model->pager,
+            'keyword' => $keyword, // Tambahkan keyword ke data untuk dikirim ke view
+            'noResults' => ($totalResults == 0), // Cek jika tidak ada hasil
+            'totalResults' => $totalResults // Kirim total hasil pencarian ke view
         ];
 		return view('admin/pendaftar/data_pendaftar', $data);
     }

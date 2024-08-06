@@ -113,12 +113,12 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label>Jumlah Tenaga Kerja */label>
+                        <label>Jumlah Tenaga Kerja *</label>
                         <input type="text" name="jumlah_tenaga_kerja"  class="form-control" required>
                     </div>
                     <div class="form-group">
                         <label>No. Hp/wa</label>
-                        <input type="text" name="no_hp" class="form-control" required>
+                        <input type="text" inputmode="numeric" name="no_hp" class="form-control" required>
                     </div>
                     <div>
                         <button type="submit" class="btn btn-success"><i class="fas fa-paper-plane"></i>Save</button>

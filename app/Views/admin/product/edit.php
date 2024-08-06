@@ -68,7 +68,7 @@
             <label for="image">Foto Produk</label>
             <input type="file" class="form-control" id="image" name="image">
             <input type="hidden" name="old_image" value="<?= $products['path'] ?>">
-            <img src="<?= site_url('uploads/' . $products['path']) ?>" class="img-thumbnail mt-2" style="height: 100px;">
+            <img src="<?= site_url('uploads/' . $products['path']) ?>" class="img-picture mt-2" style="height: 100px;">
         </div>
         <button type="submit" class="btn btn-primary">Update</button>
     </form>

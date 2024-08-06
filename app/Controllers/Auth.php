@@ -29,7 +29,7 @@ class Auth extends BaseController
                 if($user->roles== 'SUPER_ADMIN'){
                     return redirect()->to(site_url('admin'));
                 } else {
-                    return redirect()->to(site_url('home'));
+                    return redirect()->to(site_url('dashboard'));
                 }
             } else {
                 return redirect()->back()->with('error', 'Password tidak sesuai');

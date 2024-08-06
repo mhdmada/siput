@@ -15,9 +15,24 @@ class AdminBerkas extends BaseController
 		$data['berkas'] = $berkas->findAll();
 
 		$model = model(BerkasModel::class);
+
+        $keyword = $this->request->getVar('keyword');
+
+        // Cek apakah ada keyword yang diinputkan
+        if ($keyword) {
+            $model->like('berkas', $keyword)
+                  ->orLike('keterangan', $keyword)
+                  ->orLike('nama', $keyword);
+        }
+
+        $totalResults = $model->countAllResults(false);
+
         $data = [
             'berkas' => $model->paginate(10),
             'pager' => $model->pager,
+            'keyword' => $keyword, // Tambahkan keyword ke data untuk dikirim ke view
+            'noResults' => ($totalResults == 0), // Cek jika tidak ada hasil
+            'totalResults' => $totalResults // Kirim total hasil pencarian ke view
         ];
 		return view('admin/berkas/daftar_berkas', $data);
     }

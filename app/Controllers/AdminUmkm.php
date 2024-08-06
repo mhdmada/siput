@@ -6,6 +6,12 @@ use App\Models\UmkmModel;
 
 class AdminUmkm extends AdminBaseController
 {
+    public function __construct()
+    {
+        $this->model = new UmkmModel();
+        $this->helpers = ['form', 'url'];
+    }
+
     public function index()
     {
         //cara 1 dengan query builder
@@ -63,18 +69,18 @@ class AdminUmkm extends AdminBaseController
         //setting rules buat validasi form
         $rules = [
             'nik' => 'required|numeric',
-            'nama' => 'required|min_length[3]|max_length[50]',
-            'nama_usaha' => 'required|min_length[3]|max_length[50]',
-            'alamat' => 'required|min_length[3]|max_length[50]',
-            'kelurahan' => 'required|min_length[3]|max_length[50]',
-            'kecamatan' => 'required|min_length[3]|max_length[50]',
-            'alamat_usaha' => 'required|min_length[3]|max_length[50]',
-            'bidang_usaha' => 'required|min_length[10]|max_length[50]',
-            'nib' => 'required|min_length[6]|max_length[50]',
-            'npwp' => 'required|min_length[6]|max_length[50]',
+            'nama' => 'required|min_length[3]|max_length[200]',
+            'nama_usaha' => 'required|min_length[3]|max_length[200]',
+            'alamat' => 'required|min_length[3]|max_length[200]',
+            'kelurahan' => 'required|min_length[3]|max_length[200]',
+            'kecamatan' => 'required|min_length[3]|max_length[200]',
+            'alamat_usaha' => 'required|min_length[3]|max_length[200]',
+            'bidang_usaha' => 'required|min_length[1]|max_length[200]',
+            'nib' => 'required|min_length[6]|max_length[200]',
+            'npwp' => 'required|min_length[5]|max_length[200]',
             'omzet_biaya' => 'required|min_length[6]|max_length[200]',
             'jumlah_tenaga_kerja' => 'required|numeric',
-            'no_hp' => 'required|numeric',
+            'no_hp' => 'required|min_length[1]|max_length[20]',
         ];
 
         if ($this->validate($rules)){
@@ -102,7 +108,7 @@ class AdminUmkm extends AdminBaseController
             echo view('admin/umkm/add', $data);
         }
 
-        if($this->db->affectedRows() > 0 ) {
+        if($this->model->affectedRows() > 0 ) {
             return redirect()->to(site_url('admin/umkm'))->with('success', 'Data Berhasil Disimpan');
         }
     }
@@ -110,7 +116,7 @@ class AdminUmkm extends AdminBaseController
     public function edit($id = null)
     {
         if($id != null){
-            $query = $this->db->table('umkm')->getWhere(['id_umkm' => $id]);
+            $query = $this->model->table('umkm')->getWhere(['id_umkm' => $id]);
             if($query->resultID->num_rows > 0) {
                 $data['umkm'] = $query->getRow();
                 return view('admin/umkm/edit', $data);
@@ -145,13 +151,13 @@ class AdminUmkm extends AdminBaseController
             'no_hp' => $this->request->getVar('no_hp'),
         ];
         
-        $this->db->table('umkm')->where(['id_umkm' => $id])->update($data);
+        $this->model->table('umkm')->where(['id_umkm' => $id])->update($data);
         return redirect()->to(site_url('admin/umkm'))->with('success', 'Data Berhasil Diupdate');
     }
 
     public function destroy($id)
     {
-        $this->db->table('umkm')->where(['id_umkm' => $id])->delete();
+        $this->model->table('umkm')->where(['id_umkm' => $id])->delete();
         return redirect()->to(site_url('admin/umkm'))->with('success', 'Data Berhasil Dihapus');
     }
 }

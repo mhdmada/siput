@@ -54,7 +54,17 @@
                     </div>
                     <div class="form-group">
                         <label>Bidang Usaha</label>
-                        <input type="text" name="bidang_usaha" value="<?=$umkm->bidang_usaha?>" class="form-control" required>
+                        <select class="form-control selectric" name="bidang_usaha" value="<?=$umkm->bidang_usaha?>"  required>
+                            <option></option>
+                            <option>Kuliner</option>
+                            <option>Fashion</option>
+                            <option>Dagang</option>
+                            <option>Industri</option>
+                            <option>Jasa</option>
+                            <option>Pertanian</option>
+                            <option>Peternakan</option>
+                            <option>Lainnya</option>
+                        </select>
                     </div>
                     <div class="form-group">
                         <label>NIB</label>
@@ -66,7 +76,29 @@
                     </div>
                     <div class="form-group">
                         <label>Omzet Biaya</label>
-                        <input type="text" name="omzet_biaya" value="<?=$umkm->omzet_biaya?>" class="form-control" required>
+                        <select class="form-control selectric" name="omzet_biaya" value="<?=$umkm->omzet_biaya?>" required>
+                          <option></option>
+                          <option>Rp.5.000.000 - Rp.10.000.000</option>
+                          <option>Rp.15.000.000 - Rp.20.000.000</option>
+                          <option>Rp.25.000.000 - Rp.30.000.000</option>
+                          <option>Rp.35.000.000 - Rp.40.000.000</option>
+                          <option>Rp.45.000.000 - Rp.50.000.000</option>
+                          <option>Rp.55.000.000 - Rp.60.000.000</option>
+                          <option>Rp.65.000.000 - Rp.70.000.000</option>
+                          <option>Rp.75.000.000 - Rp.80.000.000</option>
+                          <option>Rp.85.000.000 - Rp.90.000.000</option>
+                          <option>Rp.95.000.000 - Rp.100.000.000</option>
+                          <option>Rp.105.000.000 - Rp.110.000.000</option>
+                          <option>Rp.115.000.000 - Rp.120.000.000</option>
+                          <option>Rp.125.000.000 - Rp.130.000.000</option>
+                          <option>Rp.135.000.000 - Rp.140.000.000</option>
+                          <option>Rp.145.000.000 - Rp.150.000.000</option>
+                          <option>Rp.155.000.000 - Rp.160.000.000</option>
+                          <option>Rp.165.000.000 - Rp.170.000.000</option>
+                          <option>Rp.175.000.000 - Rp.180.000.000</option>
+                          <option>Rp.185.000.000 - Rp.190.000.000</option>
+                          <option>Rp.195.000.000 - Rp.200.000.000</option>
+                        </select>
                     </div>
                     <div class="form-group">
                         <label>Jumlah Tenaga Kerja</label>
@@ -74,7 +106,7 @@
                     </div>
                     <div class="form-group">
                         <label>No. Hp/wa</label>
-                        <input type="text" name="no_hp" value="<?=$umkm->no_hp?>" class="form-control" required>
+                        <input type="text" inputmode="numeric" name="no_hp" value="<?=$umkm->no_hp?>" class="form-control" required>
                     </div>
                     <div>
                         <button type="submit" class="btn btn-success"><i class="fas fa-paper-plane"></i>Save</button>

@@ -32,12 +32,23 @@
 
 <div class="section-body">
         <div class="card">
-
-        <div class="card">
               <div class="card-header">
                 <h4>Daftar Info Produk</h4>
               </div>
-                  <div class="card-body">
+              <div class="card-header">
+            <form action="" method="get" autocomplete="off">
+              <div class="float-left">
+                <input type="text" name="keyword" value="<?= isset($keyword) ? $keyword : '' ?>" class="form-control" style="width:155pt;" placeholder="Cari Data">
+              </div>
+              <div class="float-right ml-2">
+                <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>
+              </div>
+            </form>
+          </div>
+                  <div class="card-body table-responsive">
+                  <?php if($noResults): ?>
+                  <h6>Tidak ada hasil.</h6>
+                  <?php else: ?>
                     <table class="table table-bordered">
                       <thead class="active">
                         <tbody>
@@ -59,7 +70,7 @@
                         foreach ($products as $key => $value) :?>
                         <tr>
                           <td><?=$no++?></td>
-                          <td><img src="<?=site_url('uploads/' . $value['path']); ?>" class="img-thumbnail mt-2" style="height: 100px;"></td>
+                          <td><img src="<?=site_url('uploads/' . $value['path']); ?>" class="img-picture mt-2" style="height: 100px;"></td>
                           <td><?=$value['nama_product']?></td>
                           <td><?=$value['nama_usaha']?></td>
                           <td><?=$value['harga_product']?></td>
@@ -81,7 +92,10 @@
                         <?php endforeach; ?>
                       </tbody>
                     </table>
-                    <?= $pager->links('default', 'pagination') ?>
+                    <?php if ($pager->getPageCount() > 1): ?>
+                      <?= $pager->links('default', 'pagination') ?>
+                    <?php endif; ?>
+                    <?php endif; ?>
                   </div>
                   <div class="card-footer">
                   <div class="buttons">
@@ -91,7 +105,6 @@
                     </div>
                   </div>
                   </div>  
-                  </div>
                 </div>
               </div>
             </div>

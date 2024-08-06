@@ -9,15 +9,34 @@ class Pelatihan extends BaseController
     public function index()
     {
          //cara 1 dengan query builder
-         $builder = $this->db->table('pelatihan');
-         $query   = $builder->get();
+        //  $builder = $this->db->table('pelatihan');
+        //  $query   = $builder->get();
  
          //cara 2
         //  $query = $this->db->query("SELECT * FROM pelatihan");
         $model = model(PelatihanModel::class);
+
+        // Ambil keyword dari input pencarian
+        $keyword = $this->request->getVar('keyword');
+        
+        // Cek apakah ada keyword yang diinputkan
+        if ($keyword) {
+            $model->like('nama_pelatihan', $keyword)
+                  ->orLike('jadwal_pelatihan', $keyword)
+                  ->orLike('lokasi_pelatihan', $keyword)
+                  ->orLike('link_pendaftaran', $keyword)
+                  ->orLike('deskripsi_pelatihan', $keyword);
+        }
+
+        // Hitung total hasil pencarian
+        $totalResults = $model->countAllResults(false);
+
         $data = [
             'pelatihan' => $model->paginate(5),
             'pager' => $model->pager,
+            'keyword' => $keyword, // Tambahkan keyword ke data untuk dikirim ke view
+            'noResults' => ($totalResults == 0), // Cek jika tidak ada hasil
+            'totalResults' => $totalResults // Kirim total hasil pencarian ke view
         ];
  
         //  $data['pelatihan'] = $query->getResult();

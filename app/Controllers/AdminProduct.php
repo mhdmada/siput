@@ -17,15 +17,34 @@ class AdminProduct extends AdminBaseController
     public function index()
     {
          //cara 1 dengan query builder
-         $builder = $this->db->table('products');
-         $query   = $builder->get();
+        //  $builder = $this->db->table('products');
+        //  $query   = $builder->get();
  
          //cara 2
         //  $query = $this->db->query("SELECT * FROM products");
         $model = model(ProductModel::class);
+
+        $keyword = $this->request->getVar('keyword');
+
+        // Cek apakah ada keyword yang diinputkan
+        if ($keyword) {
+            $model->like('nama_product', $keyword)
+                  ->orLike('nama_usaha', $keyword)
+                  ->orLike('harga_product', $keyword)
+                  ->orLike('alamat_usaha', $keyword)
+                  ->orLike('no_hp', $keyword)
+                  ->orLike('caption', $keyword)
+                  ->orLike('path', $keyword);
+        }
+
+        $totalResults = $model->countAllResults(false);
+
         $data = [
             'products' => $model->paginate(5),
             'pager' => $model->pager,
+            'keyword' => $keyword, // Tambahkan keyword ke data untuk dikirim ke view
+            'noResults' => ($totalResults == 0), // Cek jika tidak ada hasil
+            'totalResults' => $totalResults // Kirim total hasil pencarian ke view
         ];
  
         //  $data['product'] = $query->getResult();

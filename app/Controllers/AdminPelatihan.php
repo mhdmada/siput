@@ -6,6 +6,12 @@ use App\Models\PelatihanModel;
 
 class AdminPelatihan extends AdminBaseController
 {
+    public function __construct()
+    {
+        $this->model = new PelatihanModel();
+        $this->helpers = ['form', 'url'];
+    }
+
     public function index()
     {
          //cara 1 dengan query builder
@@ -35,6 +41,7 @@ class AdminPelatihan extends AdminBaseController
         $data = [
             'pelatihan' => $model->paginate(5),
             'pager' => $model->pager,
+            'keyword' => $keyword, // Tambahkan keyword ke data untuk dikirim ke view
             'noResults' => ($totalResults == 0), // Cek jika tidak ada hasil
             'totalResults' => $totalResults // Kirim total hasil pencarian ke view
         ];
@@ -78,7 +85,7 @@ class AdminPelatihan extends AdminBaseController
              echo view('admin/pelatihan/add', $data);
          }
 
-        if($this->db->affectedRows() > 0 ) {
+        if($this->model->affectedRows() > 0 ) {
             return redirect()->to(site_url('admin/pelatihan'))->with('success', 'Data Berhasil Disimpan');
         }
     }
@@ -86,7 +93,7 @@ class AdminPelatihan extends AdminBaseController
     public function edit($id = null)
     {
         if($id != null){
-            $query = $this->db->table('pelatihan')->getWhere(['id_pelatihan' => $id]);
+            $query = $this->model->table('pelatihan')->getWhere(['id_pelatihan' => $id]);
             if($query->resultID->num_rows > 0) {
                 $data['pelatihan'] = $query->getRow();
                 return view('admin/pelatihan/edit', $data);
@@ -113,13 +120,13 @@ class AdminPelatihan extends AdminBaseController
             'deskripsi_pelatihan' => $this->request->getVar('deskripsi_pelatihan'),
         ];
         
-        $this->db->table('pelatihan')->where(['id_pelatihan' => $id])->update($data);
+        $this->model->table('pelatihan')->where(['id_pelatihan' => $id])->update($data);
         return redirect()->to(site_url('admin/pelatihan'))->with('success', 'Data Berhasil Diupdate');
     }
 
     public function destroy($id)
     {
-        $this->db->table('pelatihan')->where(['id_pelatihan' => $id])->delete();
+        $this->model->table('pelatihan')->where(['id_pelatihan' => $id])->delete();
         return redirect()->to(site_url('admin/pelatihan'))->with('success', 'Data Berhasil Dihapus');
     }
 }
