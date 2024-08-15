@@ -59,6 +59,10 @@ class Umkm extends Migration
                 'type'       => 'VARCHAR',
                 'constraint' => '60',
             ],
+            'aset' => [
+                'type'       => 'VARCHAR',
+                'constraint' => '60',
+            ],
             'jumlah_tenaga_kerja' => [
                 'type'       => 'VARCHAR',
                 'constraint' => '60',

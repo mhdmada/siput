@@ -32,6 +32,7 @@ class AdminLaporan extends AdminBaseController
                   ->orLike('nib', $keyword)
                   ->orLike('npwp', $keyword)
                   ->orLike('omzet_biaya', $keyword)
+                  ->orLike('aset', $keyword)
                   ->orLike('jumlah_tenaga_kerja', $keyword)
                   ->orLike('no_hp', $keyword);
         }
@@ -79,6 +80,7 @@ class AdminLaporan extends AdminBaseController
               ->orLike('nib', $keyword)
               ->orLike('npwp', $keyword)
               ->orLike('omzet_biaya', $keyword)
+              ->orLike('aset', $keyword)
               ->orLike('jumlah_tenaga_kerja', $keyword)
               ->orLike('no_hp', $keyword);
     }
@@ -95,20 +97,21 @@ class AdminLaporan extends AdminBaseController
     $sheet = $spreadsheet->getActiveSheet();
 
     // Header
-    $sheet->setCellValue('A1', 'No');
+    $sheet->setCellValue('A1', 'NO');
     $sheet->setCellValue('B1', 'NIK');
-    $sheet->setCellValue('C1', 'Nama');
-    $sheet->setCellValue('D1', 'Nama Usaha');
-    $sheet->setCellValue('E1', 'Alamat');
-    $sheet->setCellValue('F1', 'Kelurahan');
-    $sheet->setCellValue('G1', 'Kecamatan');
-    $sheet->setCellValue('H1', 'Alamat Usaha');
-    $sheet->setCellValue('I1', 'Bidang Usaha');
+    $sheet->setCellValue('C1', 'NAMA');
+    $sheet->setCellValue('D1', 'ALAMAT');
+    $sheet->setCellValue('E1', 'KELURAHAN');
+    $sheet->setCellValue('F1', 'KECAMATAN');
+    $sheet->setCellValue('G1', 'NAMA USAHA');
+    $sheet->setCellValue('H1', 'ALAMAT USAHA');
+    $sheet->setCellValue('I1', 'BIDANG USAHA');
     $sheet->setCellValue('J1', 'NIB');
     $sheet->setCellValue('K1', 'NPWP');
-    $sheet->setCellValue('L1', 'Omzet Biaya');
-    $sheet->setCellValue('M1', 'Jumlah Tenaga Kerja');
-    $sheet->setCellValue('N1', 'No.Hp/Wa');
+    $sheet->setCellValue('L1', 'OMZET BIAYA');
+    $sheet->setCellValue('M1', 'ASET');
+    $sheet->setCellValue('N1', 'JUMLAH TENAGA KERJA');
+    $sheet->setCellValue('O1', 'NO HP/WA');
 
     // Data
     $row = 2;
@@ -116,22 +119,23 @@ class AdminLaporan extends AdminBaseController
         $sheet->setCellValue('A' . $row, $index + 1);
         $sheet->setCellValue('B' . $row, $data['nik']);
         $sheet->setCellValue('C' . $row, $data['nama']);
-        $sheet->setCellValue('D' . $row, $data['nama_usaha']);
-        $sheet->setCellValue('E' . $row, $data['alamat']);
-        $sheet->setCellValue('F' . $row, $data['kelurahan']);
-        $sheet->setCellValue('G' . $row, $data['kecamatan']);
+        $sheet->setCellValue('D' . $row, $data['alamat']);
+        $sheet->setCellValue('E' . $row, $data['kelurahan']);
+        $sheet->setCellValue('F' . $row, $data['kecamatan']);
+        $sheet->setCellValue('G' . $row, $data['nama_usaha']);
         $sheet->setCellValue('H' . $row, $data['alamat_usaha']);
         $sheet->setCellValue('I' . $row, $data['bidang_usaha']);
         $sheet->setCellValue('J' . $row, $data['nib']);
         $sheet->setCellValue('K' . $row, $data['npwp']);
         $sheet->setCellValue('L' . $row, $data['omzet_biaya']);
-        $sheet->setCellValue('M' . $row, $data['jumlah_tenaga_kerja']);
-        $sheet->setCellValue('N' . $row, $data['no_hp']);
+        $sheet->setCellValue('M' . $row, $data['aset']);
+        $sheet->setCellValue('N' . $row, $data['jumlah_tenaga_kerja']);
+        $sheet->setCellValue('O' . $row, $data['no_hp']);
         $row++;
     }
 
-    $sheet->getStyle('A1:N1')->getFont()->setBold(true);
-    $sheet->getStyle('A1:N1')->getFill()
+    $sheet->getStyle('A1:O1')->getFont()->setBold(true);
+    $sheet->getStyle('A1:O1')->getFill()
         ->setFillType(\PhpOffice\PhpSpreadsheet\Style\Fill::FILL_SOLID)
         ->getStartColor()->setARGB('4169E1');
     $styleArray = [
@@ -142,7 +146,7 @@ class AdminLaporan extends AdminBaseController
             ],
         ],
     ];
-    $sheet->getStyle('A1:N'.($row-1))->applyFromArray($styleArray);
+    $sheet->getStyle('A1:O'.($row-1))->applyFromArray($styleArray);
 
     $sheet->getColumnDimension('A')->setAutoSize(true);
     $sheet->getColumnDimension('B')->setAutoSize(true);
@@ -158,6 +162,7 @@ class AdminLaporan extends AdminBaseController
     $sheet->getColumnDimension('L')->setAutoSize(true);
     $sheet->getColumnDimension('M')->setAutoSize(true);
     $sheet->getColumnDimension('N')->setAutoSize(true);
+    $sheet->getColumnDimension('O')->setAutoSize(true);
 
     $writer = new Xlsx($spreadsheet);
     $fileName = 'Laporan_UMKM.xlsx';

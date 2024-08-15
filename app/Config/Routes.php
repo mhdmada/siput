@@ -21,10 +21,20 @@ $routes->setAutoRoute(true);
 $routes->get('login', 'Auth::login');
 
 
-//==================== USER ROUTES ====================
+
 
 $routes->get('/', 'Home::index');
 // $routes->addRedirect('/', 'home');
+
+$routes->get('public/visi_misi', 'Konten::visimisi');
+$routes->get('public/struktur', 'Konten::struktur');
+$routes->get('public/tentang', 'Konten::tentang');
+$routes->get('public/informasi', 'Konten::informasi');
+$routes->get('public/kontak', 'Konten::kontak');
+
+$routes->get('news/detail/(:segment)', 'News::detail/$1');
+
+//==================== USER ROUTES ====================
 
 $routes->get('auth', 'Register::index');
 $routes->put('auth/(:any)', 'Register::save');
@@ -34,9 +44,11 @@ $routes->get('home', 'Dashboard::index');
 $routes->get('umkm', 'Umkm::index');
 $routes->get('umkm/add', 'Umkm::create');
 $routes->post('umkm', 'Umkm::store');
-$routes->get('umkm/edit/(:any)', 'Umkm::edit/$1');
-$routes->put('umkm/(:any)', 'Umkm::update/$1');
-$routes->delete('umkm/(:segment)', 'Umkm::destroy/$1');
+$routes->get('umkm/success/(:num)', 'Umkm::success/$1');
+$routes->get('umkm/cetak/(:num)', 'Umkm::cetak/$1');
+// $routes->get('umkm/edit/(:any)', 'Umkm::edit/$1');
+// $routes->put('umkm/(:any)', 'Umkm::update/$1');
+// $routes->delete('umkm/(:segment)', 'Umkm::destroy/$1');
 
 $routes->get('pelatihan', 'Pelatihan::index');
 $routes->get('pelatihan/add', 'Pelatihan::create');
@@ -125,16 +137,15 @@ $routes->get('admin/laporan/export', 'AdminLaporan::export');
 $routes->get('admin/rekap_laporan', 'AdminRekapLaporan::index');
 $routes->get('admin/rekap_laporan/export', 'AdminRekapLaporan::export');
 
-$routes->get('admin/rekap', 'AdminRekap::index');
-$routes->get('admin/rekap/add', 'AdminRekap::create');
-$routes->post('admin/rekap/store', 'AdminRekap::store');
-$routes->get('admin/rekap/edit/(:segment)', 'AdminRekap::edit/$1');
-$routes->post('admin/rekap/update/(:segment)', 'AdminRekap::update/$1');
-$routes->post('admin/rekap/destroy/(:segment)', 'AdminRekap::destroy/$1');
-
 $routes->get('admin/artikel', 'AdminArtikel::index');
 $routes->get('admin/artikel/add', 'AdminArtikel::create');
 $routes->post('admin/artikel/store', 'AdminArtikel::store');
 $routes->get('admin/artikel/edit/(:segment)', 'AdminArtikel::edit/$1');
 $routes->post('admin/artikel/update/(:segment)', 'AdminArtikel::update/$1');
 $routes->post('admin/artikel/destroy/(:segment)', 'AdminArtikel::destroy/$1');
+
+$routes->get('admin/konten', 'AdminKonten::index');
+$routes->get('admin/konten/add', 'AdminKonten::create');
+$routes->post('admin/konten/store', 'AdminKonten::store');
+$routes->get('admin/konten/edit/(:segment)', 'AdminKonten::edit/$1');
+$routes->post('admin/konten/update/(:segment)', 'AdminKonten::update/$1');

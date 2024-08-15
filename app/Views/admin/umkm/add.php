@@ -37,35 +37,35 @@
                 <form action="<?=site_url('admin/umkm')?>" method="post" autocomplete="off">
                 <?= csrf_field() ?>
                     <div class="form-group">
-                        <label>NIK *</label>
+                        <label>NIK</label>
                         <input type="text" name="nik" class="form-control" required autofocus>
                     </div>
                     <div class="form-group">
-                        <label>Nama *</label>
+                        <label>NAMA LENGKAP</label>
                         <input type="text" name="nama" class="form-control" required>
                     </div>
                     <div class="form-group">
-                        <label>Nama Usaha *</label>
-                        <input type="text" name="nama_usaha" class="form-control" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Alamat *</label>
+                        <label>ALAMAT</label>
                         <input type="text" name="alamat" class="form-control" required>
                     </div>
                     <div class="form-group">
-                        <label>Kelurahan *</label>
+                        <label>KELURAHAN</label>
                         <input type="text" name="kelurahan" class="form-control" required>
                     </div>
                     <div class="form-group">
-                        <label>Kecamatan *</label>
+                        <label>KECAMATAN</label>
                         <input type="text" name="kecamatan" class="form-control" required>
                     </div>
                     <div class="form-group">
-                        <label>Alamat Usaha *</label>
+                        <label>NAMA USAHA</label>
+                        <input type="text" name="nama_usaha" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>ALAMAT USAHA</label>
                         <input type="text" name="alamat_usaha"  class="form-control" required>
                     </div>
                     <div class="form-group">
-                        <label>Bidang Usaha *</label>
+                        <label>BIDANG USAHA</label>
                         <select class="form-control selectric" name="bidang_usaha">
                             <option></option>
                             <option>Kuliner</option>
@@ -79,15 +79,15 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label>NIB *</label>
+                        <label>NIB</label>
                         <input type="text" name="nib"  class="form-control" required>
                     </div>
                     <div class="form-group">
-                        <label>NPWP *</label>
+                        <label>NPWP</label>
                         <input type="text" name="npwp"  class="form-control" required>
                     </div>
                     <div class="form-group">
-                        <label>Omzet Biaya *</label>
+                        <label>OMZET</label>
                         <select class="form-control selectric" name="omzet_biaya">
                           <option></option>
                           <option>Rp.5.000.000 - Rp.10.000.000</option>
@@ -113,11 +113,15 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label>Jumlah Tenaga Kerja *</label>
+                        <label>ASET</label>
+                        <input type="text" name="aset" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>JUMLAH TENAGA KERJA</label>
                         <input type="text" name="jumlah_tenaga_kerja"  class="form-control" required>
                     </div>
                     <div class="form-group">
-                        <label>No. Hp/wa</label>
+                        <label>NO HP/WA</label>
                         <input type="text" inputmode="numeric" name="no_hp" class="form-control" required>
                     </div>
                     <div>

@@ -59,19 +59,20 @@
                           <tr>
                           <th>No</th>
                           <th>NIK</th>
-                          <th>Nama</th>
-                          <th>Nama Usaha</th>
-                          <th>Alamat</th>
-                          <th>Kelurahan</th>
-                          <th>Kecamatan</th>
-                          <th>Alamat Usaha</th>
-                          <th>Bidang Usaha</th>
+                          <th>NAMA</th>
+                          <th>ALAMAT</th>
+                          <th>KELURAHAN</th>
+                          <th>KECAMATAN</th>
+                          <th>NAMA USAHA</th>
+                          <th>ALAMATA USAHA</th>
+                          <th>BIDANG USAHA</th>
                           <th>NIB</th>
                           <th>NPWP</th>
-                          <th>Omzet Biaya</th>
-                          <th>Jumlah Tenaga Kerja</th>
-                          <th>No.Hp/Wa</th>
-                          <th>Action</th>
+                          <th>OMZET</th>
+                          <th>ASET</th>
+                          <th>JUMLAH TENAGA KERJA</th>
+                          <th>NO HP/WA</th>
+                          <th>OPSI</th>
                         </tr>
                         </thead>
                         <?php 
@@ -82,15 +83,16 @@
                           <td><?=$no++?></td>
                           <td><?=$value['nik']?></td>
                           <td><?=$value['nama']?></td>
-                          <td><?=$value['nama_usaha']?></td>
                           <td><?=$value['alamat']?></td>
                           <td><?=$value['kelurahan']?></td>
                           <td><?=$value['kecamatan']?></td>
+                          <td><?=$value['nama_usaha']?></td>
                           <td><?=$value['alamat_usaha']?></td>
                           <td><?=$value['bidang_usaha']?></td>
                           <td><?=$value['nib']?></td>
                           <td><?=$value['npwp']?></td>
                           <td><?=$value['omzet_biaya']?></td>
+                          <td><?=$value['aset']?></td>
                           <td><?=$value['jumlah_tenaga_kerja']?></td>
                           <td><?=$value['no_hp']?></td>
                           <td class ="text-center" style="width:10%">

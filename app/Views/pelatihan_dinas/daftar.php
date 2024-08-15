@@ -62,9 +62,6 @@
                     <button type="reset" class="btn btn-secondary">Reset</button>
                 </form>
                     </div>
-                    <div class="card-footer">
-                        <p>*Pendaftaran tidak dipungut biaya</p>
-                    </div>
                   </div>
                 </div>
                 </div>

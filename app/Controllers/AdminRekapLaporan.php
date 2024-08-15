@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Controllers;
-use App\Models\RekapModel;
+use App\Models\SyaratPelatihanModel;
+use App\Models\PendaftaranModel;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
@@ -12,7 +13,8 @@ class AdminRekapLaporan extends AdminBaseController
 {
     public function index()
     {
-        $model = model(RekapModel::class);
+        $syaratpelatihanmodel = model(SyaratPelatihanModel::class);
+        $pendaftaranmodel = model(PendaftaranModel::class);
 
         // Ambil keyword dari input pencarian
         $keyword = $this->request->getVar('keyword');
@@ -21,23 +23,29 @@ class AdminRekapLaporan extends AdminBaseController
         
         // Cek apakah ada keyword yang diinputkan
         if ($keyword) {
-            $model->like('nama_pelatihan', $keyword)
-                  ->orLike('jadwal_pelatihan', $keyword)
-                  ->orLike('lokasi_pelatihan', $keyword)
-                  ->orLike('jumlah_peserta', $keyword);
+            $syaratpelatihanmodel->like('judul', $keyword)
+                  ->orLike('lokasi', $keyword)
+                  ->orLike('jadwal', $keyword);
         }
 
         if ($bulan && $tahun) {
-            $model->where('MONTH(jadwal_pelatihan)', $bulan);
-            $model->where('YEAR(jadwal_pelatihan)', $tahun);
+            $syaratpelatihanmodel->where('MONTH(jadwal)', $bulan);
+            $syaratpelatihanmodel->where('YEAR(jadwal)', $tahun);
         }
 
         // Hitung total hasil pencarian
-        $totalResults = $model->countAllResults(false);
+        $totalResults = $syaratpelatihanmodel->countAllResults(false);
+
+        $syarat_pelatihan = $syaratpelatihanmodel->paginate(10);
+
+        // Hitung jumlah peserta untuk setiap pelatihan
+        $total_pendaftar = $pendaftaranmodel->countAllResults();
+        
 
         $data = [
-            'rekap' => $model->paginate(5),
-            'pager' => $model->pager,
+            'syarat_pelatihan' =>$syarat_pelatihan,
+            'jumlah_peserta' => $total_pendaftar,
+            'pager' => $syaratpelatihanmodel->pager,
             'keyword' => $keyword, // Tambahkan keyword ke data untuk dikirim ke view
             'bulan' => $bulan,
             'tahun' => $tahun,
@@ -50,7 +58,8 @@ class AdminRekapLaporan extends AdminBaseController
 
     public function export()
     {
-        $model = new RekapModel();
+        $syaratpelatihanmodel = model(SyaratPelatihanModel::class);
+        $pendaftaranmodel = model(PendaftaranModel::class);
     
         // Ambil parameter filter dari request
         $keyword = $this->request->getVar('keyword');
@@ -59,38 +68,39 @@ class AdminRekapLaporan extends AdminBaseController
     
         // Cek apakah ada keyword yang diinputkan
         if ($keyword) {
-            $model->like('nama_pelatihan', $keyword)
-                  ->orLike('jadwal_pelatihan', $keyword)
-                  ->orLike('lokasi_pelatihan', $keyword)
-                  ->orLike('jumlah_peserta', $keyword);
+            $syaratpelatihanmodel->like('judul', $keyword)
+                  ->orLike('jadwal', $keyword)
+                  ->orLike('lokasi', $keyword);
         }
     
         // Filter data berdasarkan bulan dan tahun
         if ($bulan && $tahun) {
-            $model->where('MONTH(jadwal_pelatihan)', $bulan);
-            $model->where('YEAR(jadwal_pelatihan)', $tahun);
+            $syaratpelatihanmodel->where('MONTH(jadwal)', $bulan);
+            $syaratpelatihanmodel->where('YEAR(jadwal)', $tahun);
         }
-    
-        $rekap = $model->findAll();
+
+        $rekap = $syaratpelatihanmodel->findAll();
     
         $spreadsheet = new Spreadsheet();
         $sheet = $spreadsheet->getActiveSheet();
     
         // Header
-        $sheet->setCellValue('A1', 'No');
-        $sheet->setCellValue('B1', 'Nama Pelatihan');
-        $sheet->setCellValue('C1', 'Jadwal Pelatihan');
-        $sheet->setCellValue('D1', 'Lokasi Pelatihan');
-        $sheet->setCellValue('E1', 'Jumlah Peserta');
+        $sheet->setCellValue('A1', 'NO');
+        $sheet->setCellValue('B1', 'NAMA PELATIHAN');
+        $sheet->setCellValue('C1', 'JADWAL PELATIHAN');
+        $sheet->setCellValue('D1', 'LOKASI PELATIHAN');
+        $sheet->setCellValue('E1', 'JUMLAH PESERTA');
     
         // Data
         $row = 2;
-        foreach ($rekap as $index => $data) {
+        foreach ($rekap as $index => $data)
+        $total_pendaftar = $pendaftaranmodel->countAllResults();
+        {
             $sheet->setCellValue('A' . $row, $index + 1);
-            $sheet->setCellValue('B' . $row, $data['nama_pelatihan']);
-            $sheet->setCellValue('C' . $row, $data['jadwal_pelatihan']);
-            $sheet->setCellValue('D' . $row, $data['lokasi_pelatihan']);
-            $sheet->setCellValue('E' . $row, $data['jumlah_peserta']);
+            $sheet->setCellValue('B' . $row, $data['judul']);
+            $sheet->setCellValue('C' . $row, $data['jadwal']);
+            $sheet->setCellValue('D' . $row, $data['lokasi']);
+            $sheet->setCellValue('E' . $row, $total_pendaftar);
             $row++;
         }
     

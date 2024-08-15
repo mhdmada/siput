@@ -60,7 +60,7 @@ class AdminArtikel extends BaseController
                 'rules' => 'uploaded[image]'  
                     . '|is_image[image]'  
                     . '|mime_in[image,image/jpg,image/jpeg,image/gif,image/png,image/webp]'  
-                    . '|max_size[image,1000]'  
+                    . '|max_size[image,5000]'  
                     . '|max_dims[image,4000,4000]',  
             ],  
         ];

@@ -37,11 +37,11 @@
                 </div>
                 <div class="form-group">
                     <label for="isi_artikel">Isi Artikel</label>
-                    <input type="text" class="form-control" id="isi_artikel" name="isi_artikel" cols="30" rows="10" value="<?= $artikel['isi_artikel'] ?>">
-                </div>
+                    <textarea class="summernote" id="isi_artikel" name="isi_artikel" cols="50" rows="10" style="width: 800px; height: 400px;"><?= ($artikel['isi_artikel']) ?></textarea>
+                    </div>
                 <div class="form-group">
                     <label for="tgl_artikel">Tanggal dibuat</label>
-                    <input type="text" class="form-control" id="tgl_artikel" name="tgl_artikel" value="<?= $artikel['tgl_artikel'] ?>">
+                    <input type="date" class="form-control" id="tgl_artikel" name="tgl_artikel" value="<?= $artikel['tgl_artikel'] ?>">
                 </div>
                 <div class="form-group">
                     <label for="author">Author</label>

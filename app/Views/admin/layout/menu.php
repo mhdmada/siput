@@ -8,7 +8,6 @@
             <li><a class="nav-link" href="<?=site_url('admin/pelatihan')?>">Info Pelatihan</a></li>
             <li><a class="nav-link" href="<?=site_url('admin/syarat_pelatihan')?>">Persyaratan Daftar</a></li>
             <li><a class="nav-link" href="<?=site_url('admin/pendaftar')?>">Pendaftar</a></li>
-            <li><a class="nav-link" href="<?=site_url('admin/rekap')?>">Rekap Pelatihan</a></li>
         </ul>
         </li>
 <li ><a class="nav-link" href="<?=site_url('admin/perizinan')?>"><i class="fas fa-pen"></i><span>Perizinan Usaha</span></a></li>
@@ -19,6 +18,7 @@
         <ul class="dropdown-menu">
             <li><a class="nav-link" href="<?=site_url('admin/artikel')?>">Artikel</a></li>
             <li><a class="nav-link" href="<?=site_url('admin')?>">Berita Slider</a></li>
+            <li><a class="nav-link" href="<?=site_url('admin/konten')?>">Konten</a></li>
         </ul>
         </li>
 

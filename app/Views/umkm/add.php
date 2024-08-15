@@ -1,7 +1,7 @@
 <?= $this->extend('layout/default') ?>
 
 <?= $this->section('title') ?>
-<title>Tambah Data UMKM &mdash; SIPUTRI</title>
+<title>Pendaftaran Usaha &mdash; SIPUTRI</title>
 <?= $this->endSection() ?>
 
     <link rel="stylesheet" href="<?=base_url()?>/template/node_modules/bootstrap/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -16,14 +16,14 @@
         <div class="section-header-back">
           <a href="<?=site_url('umkm')?>" class="btn"><i class= "fas fa-arrow-left"></i></a>
         </div>
-        <h1>Tambah Data UMKM</h1>
+        <h1>Pendaftaran Usaha</h1>
         </div>
 
 <div class="section-body">
         <div class="card">
 
         <div class="card-header">
-            <h4>Tambah Data UMKM</h4>
+            <h4>Daftar UMKM</h4>
           </div>
           <!-- show alert validation -->
           <?php if(isset($validation)): ?>
@@ -33,7 +33,7 @@
                     </div>
                 </div>
               <?php endif; ?>
-                 <div class="card-body col-md-6">
+                <div class="card-body col-md-6">
                 <form action="<?=site_url('umkm')?>" method="post" autocomplete="off">
                 <?= csrf_field() ?>
                     <div class="form-group">
@@ -41,31 +41,31 @@
                         <input type="text" name="nik" class="form-control" required autofocus>
                     </div>
                     <div class="form-group">
-                        <label>Nama *</label>
+                        <label>NAMA SESUAI KTP *</label>
                         <input type="text" name="nama" class="form-control" required>
                     </div>
                     <div class="form-group">
-                        <label>Nama Usaha *</label>
-                        <input type="text" name="nama_usaha" class="form-control" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Alamat *</label>
+                        <label>ALAMAT SESUAI KTP *</label>
                         <input type="text" name="alamat" class="form-control" required>
                     </div>
                     <div class="form-group">
-                        <label>Kelurahan *</label>
+                        <label>KELURAHAN SESUAI KTP *</label>
                         <input type="text" name="kelurahan" class="form-control" required>
                     </div>
                     <div class="form-group">
-                        <label>Kecamatan *</label>
+                        <label>KECAMATAN SESUAI KTP *</label>
                         <input type="text" name="kecamatan" class="form-control" required>
                     </div>
                     <div class="form-group">
-                        <label>Alamat Usaha *</label>
+                        <label>NAMA USAHA *</label>
+                        <input type="text" name="nama_usaha" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>ALAMAT USAHA *</label>
                         <input type="text" name="alamat_usaha"  class="form-control" required>
                     </div>
                     <div class="form-group">
-                        <label>Bidang Usaha *</label>
+                        <label>BIDANG USAHA *</label>
                         <select class="form-control selectric" name="bidang_usaha">
                             <option></option>
                             <option>Kuliner</option>
@@ -87,7 +87,7 @@
                         <input type="text" name="npwp"  class="form-control" required>
                     </div>
                     <div class="form-group">
-                        <label>Omzet Biaya *</label>
+                        <label>OMZET PENDAPATAN *</label>
                         <select class="form-control selectric" name="omzet_biaya">
                           <option></option>
                           <option>Rp.5.000.000 - Rp.10.000.000</option>
@@ -113,15 +113,19 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label>Jumlah Tenaga Kerja */label>
+                        <label>ASET *</label>
+                        <input type="text" name="aset" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>JUMLAH TENAGA KERJA *</label>
                         <input type="text" name="jumlah_tenaga_kerja"  class="form-control" required>
                     </div>
                     <div class="form-group">
-                        <label>No. Hp/wa</label>
+                        <label>NO HP/WA *</label>
                         <input type="text" name="no_hp" class="form-control" required>
                     </div>
                     <div>
-                        <button type="submit" class="btn btn-success"><i class="fas fa-paper-plane"></i>Save</button>
+                        <button type="submit" class="btn btn-success"><i class="fas fa-paper-plane"></i>Daftar</button>
                         <button type="reset" class="btn btn-secondary">Reset</button>
                     </div>
                 </form> 

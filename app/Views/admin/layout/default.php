@@ -10,7 +10,12 @@
   <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
   <link rel="stylesheet" href="<?=base_url()?>/template/node_modules/bootstrap/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="<?=base_url()?>/template/node_modules/@fortawesome/fontawesome-free/css/all.min.css"> 
+  
   <!-- CSS Libraries -->
+  <link rel="stylesheet" href="<?=base_url()?>/template/node_modules/summernote/dist/summernote-bs4.css">
+  <link rel="stylesheet" href="<?=base_url()?>/template/node_modules/codemirror/lib/codemirror.css">
+  <link rel="stylesheet" href="<?=base_url()?>/template/node_modules/codemirror/theme/duotone-dark.css">
+  <link rel="stylesheet" href="<?=base_url()?>/template/node_modules/selectric/public/selectric.css">
 
   <!-- Template CSS -->
   <link rel="stylesheet" href="<?=base_url()?>/template/assets/css/style.css">
@@ -95,16 +100,9 @@
             <img alt="image" src="<?=base_url()?>/template/assets/img/news/ziqran.jpg" class="rounded-circle mr-1">
             <div class="d-sm-none d-lg-inline-block"> Halo, Admin</div></a>
             <div class="dropdown-menu dropdown-menu-right">
-              <div class="dropdown-title">Logged in 5 min ago</div>
-              <a href="features-profile.html" class="dropdown-item has-icon">
-                <i class="far fa-user"></i> Profile
-              </a>
-              <a href="features-activities.html" class="dropdown-item has-icon">
-                <i class="fas fa-bolt"></i> Activities
-              </a>
-              <a href="features-settings.html" class="dropdown-item has-icon">
+              <!-- <a href="features-settings.html" class="dropdown-item has-icon">
                 <i class="fas fa-cog"></i> Settings
-              </a>
+              </a> -->
               <div class="dropdown-divider"></div>
               <a href="<?=site_url('auth/logout')?>" class="dropdown-item has-icon text-danger">
                 <i class="fas fa-sign-out-alt"></i> Logout
@@ -116,7 +114,7 @@
       <div class="main-sidebar">
         <aside id="sidebar-wrapper">
           <div class="sidebar-brand">
-            <a href="<?=site_url()?>"><img src="<?=base_url()?>/template/assets/img/kota_jambi.png" alt="logo" width="20">&nbsp;SIPUTRI</a>
+            <a href="<?=site_url('admin')?>"><img src="<?=base_url()?>/template/assets/img/kota_jambi.png" alt="logo" width="20">&nbsp;SIPUTRI</a>
           </div>
           <div class="sidebar-brand sidebar-brand-sm">
             <a href="<?=site_url()?>">Siputri</a>
@@ -151,16 +149,13 @@
 
   <!-- General JS Scripts -->
   <script src="<?=base_url()?>/template/node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="<?=base_url()?>/template/node_modules/popper.js/dist/umd/popper.min.js"></script>
   <script src="<?=base_url()?>/template/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="<?=base_url()?>/template/node_modules/jquery.nicescroll/dist/jquery.nicescroll.min.js"></script>
-  <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script> -->
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script> -->
-  <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script> -->
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script> -->
   <script src="<?=base_url()?>/template/assets/js/stisla.js"></script>
 
   <!-- JS Libraies -->
+  <script src="<?= base_url() ?>/template/node_modules/summernote/dist/summernote-bs4.min.js"></script>
 
   <!-- Template JS File -->
   <script src="<?=base_url()?>/template/assets/js/scripts.js"></script>

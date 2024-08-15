@@ -29,31 +29,31 @@
                         <input type="text" name="nik" value="<?=$umkm->nik?>" class="form-control" required>
                     </div>
                     <div class="form-group">
-                        <label>Nama</label>
+                        <label>NAMA LENGKAP</label>
                         <input type="text" name="nama" value="<?=$umkm->nama?>" class="form-control" required>
                     </div>
                     <div class="form-group">
-                        <label>Nama Usaha</label>
-                        <input type="text" name="nama_usaha" value="<?=$umkm->nama_usaha?>" class="form-control" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Alamat</label>
+                        <label>ALAMAT</label>
                         <input type="text" name="alamat" value="<?=$umkm->alamat?>" class="form-control" required>
                     </div>
                     <div class="form-group">
-                        <label>Kelurahan</label>
+                        <label>KELURAHAN</label>
                         <input type="text" name="kelurahan" value="<?=$umkm->kelurahan?>" class="form-control" required>
                     </div>
                     <div class="form-group">
-                        <label>Kecamatan</label>
+                        <label>KECAMATAN</label>
                         <input type="text" name="kecamatan" value="<?=$umkm->kecamatan?>" class="form-control" required>
                     </div>
                     <div class="form-group">
-                        <label>Alamat Usaha</label>
+                        <label>NAMA USAHA</label>
+                        <input type="text" name="nama_usaha" value="<?=$umkm->nama_usaha?>" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>ALAMAT USAHA</label>
                         <input type="text" name="alamat_usaha" value="<?=$umkm->alamat_usaha?>" class="form-control" required>
                     </div>
                     <div class="form-group">
-                        <label>Bidang Usaha</label>
+                        <label>BIDANG USAHA</label>
                         <select class="form-control selectric" name="bidang_usaha" value="<?=$umkm->bidang_usaha?>"  required>
                             <option></option>
                             <option>Kuliner</option>
@@ -75,7 +75,7 @@
                         <input type="text" name="npwp" value="<?=$umkm->npwp?>" class="form-control" required>
                     </div>
                     <div class="form-group">
-                        <label>Omzet Biaya</label>
+                        <label>OMZET</label>
                         <select class="form-control selectric" name="omzet_biaya" value="<?=$umkm->omzet_biaya?>" required>
                           <option></option>
                           <option>Rp.5.000.000 - Rp.10.000.000</option>
@@ -101,11 +101,15 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label>Jumlah Tenaga Kerja</label>
+                        <label>ASET</label>
+                        <input type="text" name="aset" value="<?=$umkm->aset?>" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>JUMLAH TENAGA KERJA</label>
                         <input type="text" name="jumlah_tenaga_kerja" value="<?=$umkm->jumlah_tenaga_kerja?>" class="form-control" required>
                     </div>
                     <div class="form-group">
-                        <label>No. Hp/wa</label>
+                        <label>NO HP/WA</label>
                         <input type="text" inputmode="numeric" name="no_hp" value="<?=$umkm->no_hp?>" class="form-control" required>
                     </div>
                     <div>

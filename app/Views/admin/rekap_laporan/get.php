@@ -80,22 +80,22 @@
                         <thead class="active">
                           <tr>
                           <th>No</th>
-                          <th>Nama Pelatihan</th>
-                          <th>Jadwal Pelatihan</th>
-                          <th>Lokasi Pelatihan</th>
-                          <th>Jumlah Peserta</th>
+                          <th>NAMA PELATIHAN</th>
+                          <th>JADWAL PELATIHAN</th>
+                          <th>LOKASI PELATIHAN</th>
+                          <th>JUMLAH PESERTA</th>
                         </tr>
                         </thead>
                         <?php 
                         $page = isset($_GET['page']) ? $_GET['page'] : 1;
                         $no = 1 + (10 * ($page - 1));
-                        foreach ($rekap as $key => $value) :?>
+                        foreach ($syarat_pelatihan as $key => $value) :?>
                         <tr>
                           <td><?=$no++?></td>
-                          <td><?=$value['nama_pelatihan']?></td>
-                          <td><?=date('d/m/Y', strtotime($value['jadwal_pelatihan']))?></td>
-                          <td><?=$value['lokasi_pelatihan']?></td>
-                          <td><?=$value['jumlah_peserta']?></td>
+                          <td><?=$value['judul']?></td>
+                          <td><?=date('d/m/Y', strtotime($value['jadwal']))?></td>
+                          <td><?=$value['lokasi']?></td>
+                          <td><?=$jumlah_peserta?></td>
                         </tr>
                         <?php endforeach; ?>
                       </tbody>

@@ -23,9 +23,6 @@ class Register extends BaseController
             'username' => 'required|min_length[6]|max_length[50]',
             'password' => 'required|min_length[6]|max_length[200]',
             'password_confirmation' => 'required|min_length[6]|max_length[200]|matches[password]',
-            'bidang_usaha' => 'required|min_length[6]|max_length[50]',
-            'omzet_biaya' => 'required|min_length[6]|max_length[100]',
-            'no_hp' => 'required|numeric',
         ];
 
         if ($this->validate($rules)) {
@@ -41,24 +38,24 @@ class Register extends BaseController
             $modeluser->save($datauser);
 
 
-            //insert data umkm
-            $modelumkm = new UmkmModel();
-            $dataumkm = [
-                'nik' => $this->request->getVar('nik'),
-                'nama' => $this->request->getVar('nama'),
-                'nama_usaha' => $this->request->getVar('nama_usaha'),
-                'alamat' => $this->request->getVar('alamat'),
-                'kelurahan' => $this->request->getVar('kelurahan'),
-                'kecamatan' => $this->request->getVar('kecamatan'),
-                'alamat_usaha' => $this->request->getVar('alamat_usaha'),
-                'bidang_usaha' => $this->request->getVar('bidang_usaha'),
-                'nib' => $this->request->getVar('nib'),
-                'npwp' => $this->request->getVar('npwp'),
-                'omzet_biaya' => $this->request->getVar('omzet_biaya'),
-                'jumlah_tenaga_kerja' => $this->request->getVar('jumlah_tenaga_kerja'),
-                'no_hp' => $this->request->getVar('no_hp'),
-            ];
-            $modelumkm->save($dataumkm);
+            // //insert data umkm
+            // $modelumkm = new UmkmModel();
+            // $dataumkm = [
+            //     'nik' => $this->request->getVar('nik'),
+            //     'nama' => $this->request->getVar('nama'),
+            //     'nama_usaha' => $this->request->getVar('nama_usaha'),
+            //     'alamat' => $this->request->getVar('alamat'),
+            //     'kelurahan' => $this->request->getVar('kelurahan'),
+            //     'kecamatan' => $this->request->getVar('kecamatan'),
+            //     'alamat_usaha' => $this->request->getVar('alamat_usaha'),
+            //     'bidang_usaha' => $this->request->getVar('bidang_usaha'),
+            //     'nib' => $this->request->getVar('nib'),
+            //     'npwp' => $this->request->getVar('npwp'),
+            //     'omzet_biaya' => $this->request->getVar('omzet_biaya'),
+            //     'jumlah_tenaga_kerja' => $this->request->getVar('jumlah_tenaga_kerja'),
+            //     'no_hp' => $this->request->getVar('no_hp'),
+            // ];
+            // $modelumkm->save($dataumkm);
             
             //redirect with message
             return redirect()->to(site_url('login'))->with('success', 'User Berhasil Terdaftar');

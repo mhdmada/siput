@@ -8,7 +8,7 @@
 
 <section class="section">
         <div class="section-header">
-        <h1>Info Pelatihan Dinas</h1>
+        <h1>Info Pelatihan Dinas Tenaga Kerja, Koperasi dan UKM Kota Jambi</h1>
         </div>
 
 <?php if(session()->getFlashData('success')) : ?>

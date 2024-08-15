@@ -37,7 +37,7 @@
               <img src="<?=base_url()?>/template/assets/img/kota_jambi.png" alt="logo" width="100">
             </div>
             <div style="text-align: center;">
-            <h3 style="color: white; font-size: 24px;">Registrasi Pelaku Usaha</h3>
+            <h3 style="color: white; font-size: 24px;">Registrasi User</h3>
             </div>
 
             <div class="card card-primary" >
@@ -62,6 +62,10 @@
                       <input type="text" name="name_user" class="form-control" required>
                   </div>
                   <div class="form-group col-md-6">
+                      <label>NIK</label>
+                      <input type="text" name="nik" class="form-control" required>
+                  </div>
+                  <div class="form-group col-md-6">
                       <label>Username</label>
                       <input type="text" name="username" class="form-control" required>
                   </div>
@@ -75,7 +79,7 @@
                   </div>
               </div>
 
-              <div class="form-row">
+              <!-- <div class="form-row">
                   <div class="form-group col-md-4">
                       <label>NIK</label>
                       <input type="text" name="nik" class="form-control" required>
@@ -174,15 +178,13 @@
                     <div class="form-group col-md-4">
                         <label>No. Hp/wa</label>
                         <input type="text" name="no_hp" class="form-control" required>
-                    </div> 
-              </div>
-
-              <div class="form-group">
+                    </div>  -->
+                    <div class="form-group">
                 <button type="submit" class="btn btn-primary btn-lg btn-block" tabindex="4">
                   Daftar
                 </button>
               </div>
-
+              </div>
               </div>
               </form>
             </div>

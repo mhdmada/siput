@@ -15,6 +15,14 @@
   <link rel="stylesheet" href="<?=base_url()?>/template//node_modules/summernote/dist/summernote-bs4.css">
   <link rel="stylesheet" href="<?=base_url()?>/template/assets/css/style.css">
   <link rel="stylesheet" href="<?=base_url()?>/template/assets/css/components.css">
+
+  <style>
+        .black-text a {
+            color: black;
+            text-decoration: none;
+        }
+    </style>
+
 </head>
 
 <body class="layout-3">
@@ -30,38 +38,30 @@
                       <div class="collapse navbar-collapse navbar-right" id="navbarNav">
                         <ul class="navbar-nav">
                           <li class="nav-item active">
-                            <a class="nav-link" href="#"><h5>Beranda</h5><span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="<?=site_url()?>"><h5>Beranda</h5><span class="sr-only">(current)</span></a>
                           </li>
                           <li class="nav-item dropdown">
                           <a class="nav-link dropdown" href="" id="profilDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                               <h5>Profil</h5>
                           </a>
                             <div class="dropdown-menu" aria-labelledby="profilDropdown">
-                            <a class="dropdown-item" href="#">Visi dan Misi</a>
-                            <a class="dropdown-item" href="#">Struktur Organisasi</a>
-                            <a class="dropdown-item" href="#">Tugas Pokok dan Fungsi</a>
+                            <a class="dropdown-item" href="<?=site_url('public/visi_misi')?>">Visi dan Misi</a>
+                            <a class="dropdown-item" href="<?=site_url('public/struktur')?>">Struktur Organisasi</a>
                           </div>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link" href="iwan"><h5>Informasi</h5></a>
+                            <a class="nav-link" href="<?=site_url('public/informasi')?>"><h5>Informasi</h5></a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link" href="rian"><h5>Tentang</h5></a>
+                            <a class="nav-link" href="<?=site_url('public/tentang')?>"><h5>Tentang</h5></a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link" href="z"><h5>Kontak</h5></a>
+                            <a class="nav-link" href="<?=site_url('public/kontak')?>"><h5>Kontak</h5></a>
                           </li>
                         </ul>
                       </div>
 
           <form class="form-inline ml-auto">
-          <ul class="navbar-nav">
-            <li><a href="#" data-toggle="search" class="nav-link nav-link-lg d-sm-none"><i class="fas fa-search"></i></a></li>
-          </ul>
-          <div class="search-element">
-            <input class="form-control" type="search" placeholder="Search" aria-label="Search" data-width="250">
-            <button class="btn" type="submit"><i class="fas fa-search"></i></button>
-          </div>
             <a class="nav-link" href="<?=site_url('auth/login')?>"><h5>Login</h5></a>
           </form>
         </nav>
@@ -126,7 +126,10 @@
             <h2 class="center">Informasi Terbaru</h2>
             <hr class="my-4">
             <div class="row">
-            <?php foreach ($artikel as $value): ?>
+            <?php
+            $page = isset($_GET['page']) ? $_GET['page'] : 1;
+            $no = 1 + (3 * ($page - 1));
+            foreach ($artikel as $value): ?>
               <div class="col-12 col-md-4 col-lg-4">
                 <article class="article article-style-c">
                   <div class="article-header">
@@ -134,16 +137,14 @@
                     </div>
                   </div>
                   <div class="article-details">
-                    <div class="article-category"><a href="#">News</a></div>
                     <div class="article-title">
-                      <h2><a href="#"><?= substr($value['judul_artikel'], 0, 100); ?></a></h2>
+                    <h2 class="black-text"><a href="<?= site_url('news/detail/' . $value['id_artikel']) ?>"><?= substr($value['judul_artikel'], 0, 100); ?></a></h2>
                     </div>
-                    <p><?= substr($value['isi_artikel'], 0, 100); ?>...</p>
+                    <p><a href="<?= site_url('news/detail/' . $value['id_artikel']) ?>">Baca Selengkapnya</a></p>
                     <div class="article-user">
-                      <img alt="image" src="template/assets/img/news/ziqran.jpg">
                       <div class="article-user-details">
                         <div class="user-detail-name">
-                          <a href="#">Admin</a>
+                          <a>Admin</a>
                         </div>
                         <div class="text"><?=date('d/m/Y', strtotime($value['tgl_artikel']))?></div>
                       </div>
@@ -152,11 +153,16 @@
                 </article>
               </div>
               <?php endforeach; ?>
+              <?php if ($pager->getPageCount() > 1): ?>
+            <div class="container">
+            <?= $pager->links('default', 'pagination') ?>
+            </div>
+            <?php endif; ?>
             </div>
         </section>
       </div>
 
-<div class="card bg-whitesmoke">
+<div class="card bg-white">
   <div class="card-body">
     <div class="elementor-container elementor-column-gap-default" style="display: flex;">
       <div class="elementor-column elementor-col-66 elementor-top-column elementor-element elementor-element-c060139" data-id="c060139" data-element_type="column">
@@ -164,7 +170,6 @@
           <div class="elementor-element elementor-element-7498da1 elementor-widget elementor-widget-google_maps" data-id="7498da1" data-element_type="widget" data-widget_type="google_maps.default">
             <div class="elementor-widget-container">
               <style>
-                /*! elementor - v3.17.0 - 08-11-2023 */
                 .elementor-widget-google_maps .elementor-widget-container {
                   overflow: hidden;
                 }
@@ -179,7 +184,7 @@
                 }
               </style>
               <div class="elementor-custom-embed">
-                <iframe loading="lazy" class="embed-responsive-item" src="https://maps.google.com/maps?q=9J95%2BHG8%2C%20JL.%20Kyai%20Haji%20Agus%20Salim%2C%20Paal%20Lima%2C%20Kec.%20Kota%20Baru%2C%20Kota%20Jambi%2C%20Jambi%2036129&t=m&z=16&output=embed&iwloc=near" title="Dinas Tenaga Kerja, Koperasi dan UKM Kota Jambi" aria-label="Dinas Tenaga Kerja, Koperasi dan UKM Kota Jambi"></iframe>
+                <iframe loading="lazy" class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255244.9058408578!2d103.30404369453127!3d-1.6311201999999974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e258620dd1db841%3A0x7b0e51aa495e5139!2sKantor%20DISNAKER%20KOTA%20JAMBI!5e0!3m2!1sid!2sid!4v1723381570942!5m2!1sid!2sid" title="Dinas Tenaga Kerja, Koperasi dan UKM Kota Jambi" aria-label="Dinas Tenaga Kerja, Koperasi dan UKM Kota Jambi"></iframe>
               </div>
             </div>
           </div>
@@ -190,7 +195,7 @@
           <div class="elementor-element elementor-element-0599e2b elementor-widget elementor-widget-text-editor" data-id="0599e2b" data-element_type="widget" data-widget_type="text-editor.default">
             <div class="elementor-widget-container">
               <p><strong>DINAS TENAGA KERJA, KOPERASI DAN UKM KOTA JAMBI</strong><br>JL. Kyai Haji Agus Salim, Paal Lima, Kec. Kota Baru, Kota Jambi, Jambi 36129</p>
-              <h6>Telp : (0741) 446344</h6>
+              <h6>Telp : 085219754647</h6>
               <h6>Email: disnakerkopukm_kotajambi@gmail.com</h6>
             </div>
           </div>

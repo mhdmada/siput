@@ -8,14 +8,17 @@ class Home extends BaseController
     public function __construct()
     {
         $this->model = new ArtikelModel();
-        $this->helpers = ['form', 'url',];
+        $this->helpers = ['form', 'url'];
     }
 
     public function index()
     {
-        $data['artikel'] = $this->model->findAll();
+        $model = new ArtikelModel();
+        $data = [
+            'artikel' => $model->paginate(3),
+            'pager' => $model->pager,
+        ];
         return view('public/index', $data);
     }
-
 
 }

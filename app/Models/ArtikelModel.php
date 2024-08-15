@@ -43,4 +43,11 @@ class ArtikelModel extends Model
     protected $afterFind      = [];
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
+
+    public function getArtikelById($id)
+    {
+        return $this->asArray()
+                    ->where(['id_artikel' => $id])
+                    ->first();
+    }
 }

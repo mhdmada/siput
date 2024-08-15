@@ -39,6 +39,7 @@ class AdminUmkm extends AdminBaseController
                   ->orLike('nib', $keyword)
                   ->orLike('npwp', $keyword)
                   ->orLike('omzet_biaya', $keyword)
+                  ->orLike('aset', $keyword)
                   ->orLike('jumlah_tenaga_kerja', $keyword)
                   ->orLike('no_hp', $keyword);
         }
@@ -79,6 +80,7 @@ class AdminUmkm extends AdminBaseController
             'nib' => 'required|min_length[6]|max_length[200]',
             'npwp' => 'required|min_length[5]|max_length[200]',
             'omzet_biaya' => 'required|min_length[6]|max_length[200]',
+            'aset' => 'required|min_length[1]|max_length[200]',
             'jumlah_tenaga_kerja' => 'required|numeric',
             'no_hp' => 'required|min_length[1]|max_length[20]',
         ];
@@ -97,6 +99,7 @@ class AdminUmkm extends AdminBaseController
                 'nib' => $this->request->getVar('nib'),
                 'npwp' => $this->request->getVar('npwp'),
                 'omzet_biaya' => $this->request->getVar('omzet_biaya'),
+                'aset' => $this->request->getVar('aset'),
                 'jumlah_tenaga_kerja' => $this->request->getVar('jumlah_tenaga_kerja'),
                 'no_hp' => $this->request->getVar('no_hp'),
             ];
@@ -147,6 +150,7 @@ class AdminUmkm extends AdminBaseController
             'nib' => $this->request->getVar('nib'),
             'npwp' => $this->request->getVar('npwp'),
             'omzet_biaya' => $this->request->getVar('omzet_biaya'),
+            'aset' => $this->request->getVar('aset'),
             'jumlah_tenaga_kerja' => $this->request->getVar('jumlah_tenaga_kerja'),
             'no_hp' => $this->request->getVar('no_hp'),
         ];

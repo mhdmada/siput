@@ -107,13 +107,14 @@
               </div>
             </div><br>
             <div class="simple-footer">
-              <p>Copyright &copy; Dinas Tenaga Kerja, Koperasi dan UKM Kota Jambi</p>
+              <p style="color : white">Copyright &copy; Dinas Tenaga Kerja, Koperasi dan UKM Kota Jambi</p>
             </div>
           </div>
         </div>
       </div>
     </section>
   </div>
+  
 </div>
 
   <!-- General JS Scripts -->
