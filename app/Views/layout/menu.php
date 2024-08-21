@@ -12,4 +12,3 @@
 <li ><a class="nav-link" href="<?=site_url('perizinan')?>"><i class="fas fa-tags"></i><span>Perizinan Usaha</span></a></li>
 <li ><a class="nav-link" href="<?=site_url('product')?>"><i class="fas fa-industry"></i><span>Produk</span></a></li>
 <li ><a class="nav-link" href="<?=site_url('berkas')?>"><i class="fas fa-file-archive"></i><span>Pengajuan Berkas</span></a></li>
-<li ><a class="nav-link" href="<?=site_url('home')?>"><i class="fas fa-cog"></i><span>Settings</span></a></li>

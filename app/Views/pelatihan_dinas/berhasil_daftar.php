@@ -25,9 +25,14 @@
                     <p> Selanjutnya dilakukan sesi wawancara dengan calon peserta Pelatihan Kewirausahaan, yang sudah memenuhi administrasi dan calon peserta dimohon membawa berkas pendaftaran yang sesuai pada link pendaftaran. Bagi peserta yang lolos dan tidak lolos administrasi akan dihubungi oleh Penyelenggara. Untuk Info lebih lanjut hubungi kontak berikut : 089514806788
                     </p>
                     <div class="card-footer bg-whitesmoke">
-                    <div class="buttons">
+                    <div class="buttons float-left">
                     <a href="<?= site_url('pelatihan_dinas/persyaratan') ?>" class="btn btn-primary">
                         Kembali
+                    </a>
+                    </div>
+                    <div class="buttons float-left">
+                    <a href="<?= site_url('pelatihan_dinas/cetak/' . $pendaftaran['id_daftar']) ?>" target="_blank" class="btn btn-success btn-print">
+                    <i class="fas fa-print"></i> Cetak Bukti Pendaftaran
                     </a>
                     </div>
                     </div>

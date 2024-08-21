@@ -60,11 +60,10 @@
                           </li>
                         </ul>
                       </div>
-
-          <form class="form-inline ml-auto">
-            <a class="nav-link" href="<?=site_url('auth/login')?>"><h5>Login</h5></a>
-          </form>
-        </nav>
+                    <form class="form-inline ml-auto">
+                  <a class="nav-link" href="<?=site_url('auth/login')?>"><h5>Login</h5></a>
+                </form>
+              </nav>
 
       <!-- Main Content -->
       <div class="main-content">
@@ -101,18 +100,32 @@
                     </div>
             <br>&nbsp;<br>
               
-            <h2 class="text-center">TENTANG APLIKASI</h2>
+            <h2 class="text-center">SOSIAL MEDIA KAMI</h2>
             <hr class="my-4">
-            <div class="card text-center">
-              <div class="card-body">
-                <p>SIPUTRI Kota Jambi adalah singkatan dari Sistem Informasi Pelayanan UMKM Terintegrasi
-                  Kota Jambi. Aplikasi ini menjadi salah satu alternatif sumber informasi UMKM di seluruh 
-                  Kota Jambi.
-                </p>
-              </div>
-              <div class="card-footer">
-                -Dinas Tenaga Kerja, Koperasi dan UKM Kota Jambi-
-              </div>
+            <div class="container mt-5">
+                <div class="row justify-content-center">
+                    <div class="col-md-4">
+                        <div class="card" style="height: 300px; display: flex; align-items: center; justify-content: center; border-radius: 15px;">
+                            <a href="https://www.disnakerkop.jambikota.go.id" target="_blank">
+                                <img src="<?=site_url()?>/template/assets/img/website.png" style="width: 150px; height: 150px;" alt="Website Icon">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card" style="height: 300px; display: flex; align-items: center; justify-content: center; border-radius: 15px;">
+                            <a href="https://www.instagram.com/disnakerkopukm_kotajambi" target="_blank">
+                                <img src="<?=site_url()?>/template/assets/img/instagram.png" style="width: 150px; height: 150px;" alt="Instagram Icon">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card" style="height: 300px; display: flex; align-items: center; justify-content: center; border-radius: 15px;">
+                            <a href="https://www.facebook.com/disnakerkopukm.kotajambi.1/" target="_blank">
+                                <img src="<?=site_url()?>/template/assets/img/facebook.png" style="width: 150px; height: 150px;" alt="Facebook Icon">
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
             <br>
             <div class="row mt-4">
@@ -226,16 +239,12 @@
   <script src="<?=base_url()?>/template/node_modules/jquery/dist/jquery.min.js"></script>
   <script src="<?=base_url()?>/template/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="<?=base_url()?>/template/node_modules/jquery.nicescroll/dist/jquery.nicescroll.min.js"></script>
-  <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script> -->
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script> -->
-  <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script> -->
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script> -->
   <script src="<?=base_url()?>/template/assets/js/stisla.js"></script>
 
 
   <!-- JS Libraies -->
   <script src="<?=base_url()?>/template/node_modules/gmaps/gmaps.min.js"></script>
+
   <!-- Page Specific JS File -->
   <script src="<?=base_url()?>/template/assets/js/page/gmaps-geolocation.js"></script>
 

@@ -12,7 +12,7 @@ class PendaftaranModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['nama_lengkap', 'file_ktp', 'file_kk', 'file_nib', 'file_npwp'];
+    protected $allowedFields    = ['nama_lengkap', 'file_ktp', 'file_kk', 'file_nib', 'file_npwp','kode_daftar'];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;

@@ -17,7 +17,6 @@
 <a href="#" class="nav-link has-dropdown"><i class="fas fa-newspaper"></i> <span>Postingan</span></a>
         <ul class="dropdown-menu">
             <li><a class="nav-link" href="<?=site_url('admin/artikel')?>">Artikel</a></li>
-            <li><a class="nav-link" href="<?=site_url('admin')?>">Berita Slider</a></li>
             <li><a class="nav-link" href="<?=site_url('admin/konten')?>">Konten</a></li>
         </ul>
         </li>

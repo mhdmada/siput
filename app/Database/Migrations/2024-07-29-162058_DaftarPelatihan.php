@@ -19,6 +19,10 @@ class DaftarPelatihan extends Migration
 				'type'           => 'VARCHAR',
 				'constraint'     => '100',
 			],
+			'kode_daftar'       => [
+				'type'           => 'VARCHAR',
+				'constraint'     => '100',
+			],
 			'file_ktp'       => [
 				'type'           => 'VARCHAR',
 				'constraint'     => '100',

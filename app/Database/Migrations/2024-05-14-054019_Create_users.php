@@ -19,6 +19,12 @@ class CreateUsers extends Migration
                 'type'       => 'VARCHAR',
                 'constraint' => '50',
             ],
+            'foto_profil' => [
+                'type'       => 'VARCHAR',
+                'constraint' => 255,
+                'null'       => true, // Bisa null jika belum ada foto
+                'default'    => 'avatar-1.png', // Nilai default berupa file default image
+            ],
             'name_user' => [
                 'type'       => 'VARCHAR',
                 'constraint' => '50',

@@ -56,12 +56,12 @@
                         <tbody>
                           <thead class="active">
                           <tr>
-                          <th>No</th>
-                          <th>Nama Pelatihan</th>
-                          <th>Jadwal Pelatihan</th>
-                          <th>Lokasi Pelatihan</th>
-                          <th>Link Pendaftaran</th>
-                          <th>Deskripsi Pelatihan</th>
+                          <th>NO</th>
+                          <th>NAMA PELATIHAN</th>
+                          <th>JADWAL PELATIHAN</th>
+                          <th>LOKASI PELATIHAN</th>
+                          <th>LINK PENDAFTARAN</th>
+                          <th>DESKRIPSI PELATIHAN</th>
                         </tr>
                         </thead>
                         <?php 

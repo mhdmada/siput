@@ -105,16 +105,43 @@ class PelatihanDinas extends BaseController
             'file_nib' => $fileNames['file_nib'],
             'file_npwp' => $fileNames['file_npwp']
         ]);
-
+        
+        $lastId = $pendaftaran->insertID();
         session()->setFlashdata('success', 'Pendaftaran berhasil');
-        return redirect()->to(site_url('pelatihan_dinas/berhasil_daftar'));
+        return redirect()->to(site_url('pelatihan_dinas/berhasil_daftar/'. $lastId));
     }
 
-    public function berhasil()
+    public function berhasil($id)
     {
-        $model = new SyaratPelatihanModel();
-        $data['syarat_pelatihan'] = $model->findAll();
+        $syarat_pelatihan = new SyaratPelatihanModel();
+        $pendaftaran = new PendaftaranModel();
+        
+        $data['syarat_pelatihan'] = $syarat_pelatihan->findAll();
+        $data['pendaftaran'] = $pendaftaran->find($id);
+    
+        return view('pelatihan_dinas/berhasil_daftar', $data);
+    }
 
-        return view('pelatihan_dinas/berhasil_daftar',$data);
+    public function cetak($id)
+    {
+        $syarat_pelatihan = new SyaratPelatihanModel();
+        $pendaftaran = new PendaftaranModel();
+    
+        $pendaftaranData = $pendaftaran->find($id);
+    
+        if ($pendaftaranData) {
+            $id_daftar = $pendaftaranData['id_daftar'];
+    
+            $awalan = $id_daftar;
+            $jumlahPeserta = $pendaftaran->countAllResults();
+            $kodePendaftaran = $awalan . sprintf('%04d', $jumlahPeserta + 1);
+            $pendaftaran->update($id, ['kode_daftar' => $kodePendaftaran]);
+            $data['kode_daftar'] = $kodePendaftaran;
+        }
+    
+        $data['syarat_pelatihan'] = $syarat_pelatihan->findAll();
+        $data['pendaftaran'] = $pendaftaranData;
+    
+        return view('pelatihan_dinas/cetak', $data);
     }
 }

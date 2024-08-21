@@ -24,7 +24,13 @@ class Auth extends BaseController
         $user = $query->getRow();
         if($user) {
             if(password_verify($post['password'], $user->password)) {
-                $params = ['id_user' => $user->id_user];
+                $params = [
+                
+                'id_user' => $user->id_user,
+                'username' => $user->username
+                
+                ];
+                
                 session()->set($params);
                 if($user->roles== 'SUPER_ADMIN'){
                     return redirect()->to(site_url('admin'));

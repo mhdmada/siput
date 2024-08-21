@@ -41,6 +41,9 @@ $routes->put('auth/(:any)', 'Register::save');
 
 $routes->get('home', 'Dashboard::index');
 
+$routes->get('profile', 'UserProfile::index');
+$routes->post('profile/upload', 'UserProfile::upload');
+
 $routes->get('umkm', 'Umkm::index');
 $routes->get('umkm/add', 'Umkm::create');
 $routes->post('umkm', 'Umkm::store');
@@ -76,7 +79,8 @@ $routes->get('pelatihan_dinas', 'PelatihanDinas::index');
 $routes->get('pelatihan_dinas/persyaratan', 'PelatihanDinas::persyaratan');
 $routes->get('pelatihan_dinas/daftar', 'PelatihanDinas::daftar');
 $routes->post('pelatihan_dinas/save', 'PelatihanDinas::save');
-$routes->get('pelatihan_dinas/berhasil_daftar', 'PelatihanDinas::berhasil');
+$routes->get('pelatihan_dinas/berhasil_daftar/(:num)', 'PelatihanDinas::berhasil/$1');
+$routes->get('pelatihan_dinas/cetak/(:num)', 'PelatihanDinas::cetak/$1');
 
 $routes->get('berkas', 'Berkas::index');
 $routes->get('berkas', 'Berkas::create');
