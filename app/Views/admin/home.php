@@ -19,10 +19,10 @@
                 </div>
                 <div class="card-wrap">
                   <div class="card-header">
-                    <h4>Total UMKM</h4>
+                    <h4>Total Data UMKM</h4>
                   </div>
                   <div class="card-body">
-                  12
+                  <?= $totalUmkm ?>
                   </div>
                 </div>
               </div>
@@ -34,10 +34,10 @@
                 </div>
                 <div class="card-wrap">
                   <div class="card-header">
-                    <h4>Pelatihan UMKM</h4>
+                    <h4>Total Info Pelatihan UMKM</h4>
                   </div>
                   <div class="card-body">
-                    42
+                  <?= $totalPelatihan ?>
                   </div>
                 </div>
               </div>
@@ -49,10 +49,10 @@
                 </div>
                 <div class="card-wrap">
                   <div class="card-header">
-                    <h4>Detail Produk UMKM</h4>
+                    <h4>Total Data Produk UMKM</h4>
                   </div>
                   <div class="card-body">
-                    2
+                  <?= $totalProducts ?>
                   </div>
                 </div>
               </div>
@@ -64,10 +64,10 @@
                 </div>
                 <div class="card-wrap">
                   <div class="card-header">
-                    <h4>Online Users</h4>
+                    <h4>Total Pengguna</h4>
                   </div>
                   <div class="card-body">
-                    47
+                  <?= $totalUsers ?>
                   </div>
                 </div>
               </div>

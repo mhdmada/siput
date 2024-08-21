@@ -20,6 +20,7 @@ class Register extends BaseController
         $rules = [
             'nik' => 'required|numeric',
             'name_user' => 'required|min_length[3]|max_length[20]',
+            'email' => 'required|min_length[6]|max_length[50]',
             'username' => 'required|min_length[6]|max_length[50]',
             'password' => 'required|min_length[6]|max_length[200]',
             'password_confirmation' => 'required|min_length[6]|max_length[200]|matches[password]',
@@ -31,6 +32,7 @@ class Register extends BaseController
             $datauser = [
                 'nik' => $this->request->getVar('nik'),
                 'name_user' => $this->request->getVar('name_user'),
+                'email' => $this->request->getVar('email'),
                 'username' => $this->request->getVar('username'),
                 'password' => password_hash($this->request->getVar('password'), PASSWORD_BCRYPT),
                 'roles' => "UMKM"
@@ -58,7 +60,7 @@ class Register extends BaseController
             // $modelumkm->save($dataumkm);
             
             //redirect with message
-            return redirect()->to(site_url('login'))->with('success', 'User Berhasil Terdaftar');
+            return redirect()->to(site_url('login'))->with('success', 'Anda Berhasil Mendaftar');
 
         } else {
             // redirect and show list error message 

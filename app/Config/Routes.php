@@ -38,6 +38,8 @@ $routes->get('news/detail/(:segment)', 'News::detail/$1');
 
 $routes->get('auth', 'Register::index');
 $routes->put('auth/(:any)', 'Register::save');
+// $routes->get('auth/forgotPassword', 'Auth::forgotPassword');
+// $routes->post('auth/processForgotPassword', 'Auth::processForgotPassword');
 
 $routes->get('home', 'Dashboard::index');
 

@@ -8,7 +8,7 @@
 
 <section class="section">
     <div class="section-header">
-        <h1>Profil</h1>
+        <h1>Profil Pengguna</h1>
     </div>
 
     <?php if (session()->getFlashdata('success')) : ?>
@@ -45,7 +45,7 @@
                                 <form id="upload-form" action="<?= site_url('userprofile/upload') ?>" method="post" enctype="multipart/form-data" class="d-flex flex-column align-items-center">
                                     <?= csrf_field() ?>
                                     <input type="file" name="foto_profil" class="d-none" id="foto-upload" onchange="document.getElementById('upload-form').submit();">
-                                    <button type="button" class="btn btn-dark btn-sm mt-2" onclick="document.getElementById('foto-upload').click();">Ubah Foto Profil</button>
+                                    <button type="button" class="btn btn-dark btn-sm mt-2" onclick="document.getElementById('foto-upload').click();">Upload Foto Profil</button>
                                 </form>
                             </div>
                         </div>
@@ -63,6 +63,10 @@
                             <tr>
                                 <th>Username</th>
                                 <td><?= $users['username'] ?></td>
+                            </tr>
+                            <tr>
+                                <th>Email</th>
+                                <td><?= $users['email'] ?></td>
                             </tr>
                         </table>
                     </div>
