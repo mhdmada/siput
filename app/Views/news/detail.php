@@ -42,13 +42,13 @@
                           </div>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link" href="iwan"><h5>Informasi</h5></a>
+                            <a class="nav-link" href="<?=site_url('public/informasi')?>"><h5>Informasi</h5></a>
                           </li>
                           <li class="nav-item">
                             <a class="nav-link" href="<?=site_url('public/tentang')?>"><h5>Tentang</h5></a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link" href="z"><h5>Kontak</h5></a>
+                            <a class="nav-link" href="<?=site_url('public/kontak')?>"><h5>Kontak</h5></a>
                           </li>
                         </ul>
                       </div>

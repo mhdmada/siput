@@ -35,72 +35,62 @@
         <form class="form-inline mr-auto">
           <ul class="navbar-nav mr-3">
             <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars"></i></a></li>
-            <!-- <li><a href="#" data-toggle="search" class="nav-link nav-link-lg d-sm-none"><i class="fas fa-search"></i></a></li> -->
           </ul>
-          <!-- <div class="search-element">
-            <input class="form-control" type="search" placeholder="Search" aria-label="Search" data-width="250">
-            <button class="btn" type="submit"><i class="fas fa-search"></i></button>
-            <div class="search-backdrop"></div>
-            <div class="search-result">
-              <div class="search-header">
-                Histories
-              </div>
-              <div class="search-item">
-                <a href="#">How to hack NASA using CSS</a>
-                <a href="#" class="search-close"><i class="fas fa-times"></i></a>
-              </div>
-              <div class="search-item">
-                <a href="#">Kodinger.com</a>
-                <a href="#" class="search-close"><i class="fas fa-times"></i></a>
-              </div>
-              <div class="search-item">
-                <a href="#">#Stisla</a>
-                <a href="#" class="search-close"><i class="fas fa-times"></i></a>
-              </div>
-              <div class="search-header">
-                Result
-              </div>
-              <div class="search-item">
-                <a href="#">
-                  <img class="mr-3 rounded" width="30" src="<?=base_url()?>/template/assets/img/products/product-3-50.png" alt="product">
-                  oPhone S9 Limited Edition
-                </a>
-              </div>
-              <div class="search-item">
-                <a href="#">
-                  <img class="mr-3 rounded" width="30" src="<?=base_url()?>/template/assets/img/products/product-2-50.png" alt="product">
-                  Drone X2 New Gen-7
-                </a>
-              </div>
-              <div class="search-item">
-                <a href="#">
-                  <img class="mr-3 rounded" width="30" src="<?=base_url()?>/template/assets/img/products/product-1-50.png" alt="product">
-                  Headphone Blitz
-                </a>
-              </div>
-              <div class="search-header">
-                Projects
-              </div>
-              <div class="search-item">
-                <a href="#">
-                  <div class="search-icon bg-danger text-white mr-3">
-                    <i class="fas fa-code"></i>
-                  </div>
-                  Stisla Admin Template
-                </a>
-              </div>
-              <div class="search-item">
-                <a href="#">
-                  <div class="search-icon bg-primary text-white mr-3">
-                    <i class="fas fa-laptop"></i>
-                  </div>
-                  Create a new Homepage Design
-                </a>
-              </div>
-            </div>
-          </div> -->
         </form>
+
         <ul class="navbar-nav navbar-right">
+        <div class="float-left">
+        <li class="dropdown dropdown-list-toggle">
+        <a href="#" data-toggle="dropdown" class="nav-link notification-toggle nav-link-lg">
+            <i class="far fa-bell"></i>
+        </a>
+        <div class="dropdown-menu dropdown-list dropdown-menu-right">
+            <div class="dropdown-header">Notifikasi</div>
+            <div class="dropdown-list-content dropdown-list-icons">
+                <?php if ($notification = session()->get('notification')): ?>
+                    <a href="#" class="dropdown-item dropdown-item-unread">
+                        <div class="dropdown-item-icon <?= $notification['type'] === 'success' ? 'bg-info' : 'bg-danger' ?> text-white">
+                            <i class="fas <?= $notification['type'] === 'success' ? 'fa-check' : 'fa-times' ?>"></i>
+                        </div>
+                        <div class="dropdown-item-desc">
+                            <?= $notification['message'] ?>
+                            <?php
+                            function timeAgo($timestamp) {
+                              $timeDifference = time() - $timestamp;
+                              $seconds = $timeDifference;
+    
+                              $minutes      = round($seconds / 60);           // value 60 is seconds
+                              $hours        = round($seconds / 3600);         // value 3600 is 60 minutes * 60 seconds
+                              $days         = round($seconds / 86400);        // value 86400 is 24 hours * 60 minutes * 60 seconds
+                              $weeks        = round($seconds / 604800);       // value 604800 is 7 days * 24 hours * 60 minutes * 60 seconds
+    
+                              if ($seconds <= 60) {
+                                  return "Baru saja"; // Sekitar beberapa detik
+                              } else if ($minutes <= 60) {
+                                  return "$minutes menit lalu";
+                              } else if ($hours <= 24) {
+                                  return "$hours jam lalu";
+                              } else if ($days <= 7) {
+                                  return "$days hari lalu";
+                              } else {
+                                  return "$weeks minggu lalu";
+                              }
+                            }
+                            ?>
+                            <div class="time"><?= timeAgo($notification['timestamp']) ?></div>
+                        </div>
+                    </a>
+                    <?php else: ?>
+                        <a href="#" class="dropdown-item">
+                            <div class="dropdown-item-desc">
+                                Tidak ada notifikasi baru.
+                            </div>
+                        </a>
+                    <?php endif; ?>
+                </div>
+            </div>
+        </li>
+      </div>
           <li class="dropdown"><a href="" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
           <img src="<?= site_url('/uploads/profile/' . ($users['foto_profil'] ?? 'avatar-1.png')) ?>" class="rounded-circle mr-1" style="width: 30px; height: 30px; object-fit: cover;">
             <div class="d-sm-none d-lg-inline-block"> Halo, <?= session()->get('username'); ?></div></a>

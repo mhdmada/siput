@@ -52,29 +52,29 @@ class Auth extends BaseController
         return redirect()->to(site_url('login'));
     }
 
-    public function forgotPassword()
-    {
-    return view('auth/forgot_password');
-    }
+    // public function forgotPassword()
+    // {
+    // return view('auth/forgot_password');
+    // }
 
-    public function processForgotPassword()
-    {
-        $email = $this->request->getPost('email');
+    // public function processForgotPassword()
+    // {
+    //     $email = $this->request->getPost('email');
     
-        $userModel = new UserModel();
-        $users = $userModel->where('email', $email)->first();
+    //     $userModel = new UserModel();
+    //     $users = $userModel->where('email', $email)->first();
     
-        if ($users) {
-            $token = bin2hex(random_bytes(50));
+    //     if ($users) {
+    //         $token = bin2hex(random_bytes(50));
         
-            $resetLink = site_url('auth/resetPassword?token=' . $token);
+    //         $resetLink = site_url('auth/resetPassword?token=' . $token);
         
-            session()->setFlashdata('success', 'Email reset password telah dikirim!');
-            return redirect()->to('auth/forgotPassword');
-        } else {
-            session()->setFlashdata('error', 'Email tidak ditemukan.');
-            return redirect()->to('auth/forgotPassword');
-        }
-    }
+    //         session()->setFlashdata('success', 'Email reset password telah dikirim!');
+    //         return redirect()->to('auth/forgotPassword');
+    //     } else {
+    //         session()->setFlashdata('error', 'Email tidak ditemukan.');
+    //         return redirect()->to('auth/forgotPassword');
+    //     }
+    // }
         
 }

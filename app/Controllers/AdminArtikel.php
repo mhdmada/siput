@@ -30,15 +30,14 @@ class AdminArtikel extends BaseController
                   ->orLike('author', $keyword);
         }
 
-        // Hitung total hasil pencarian
         $totalResults = $model->countAllResults(false);
 
         $data = [
             'artikel' => $model->paginate(10),
             'pager' => $model->pager,
-            'keyword' => $keyword, // Tambahkan keyword ke data untuk dikirim ke view
-            'noResults' => ($totalResults == 0), // Cek jika tidak ada hasil
-            'totalResults' => $totalResults // Kirim total hasil pencarian ke view
+            'keyword' => $keyword, 
+            'noResults' => ($totalResults == 0), 
+            'totalResults' => $totalResults 
         ];
 		return view('admin/artikel/get', $data);
     }

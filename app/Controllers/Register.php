@@ -19,11 +19,11 @@ class Register extends BaseController
         //setting rules buat validasi form
         $rules = [
             'nik' => 'required|numeric',
-            'name_user' => 'required|min_length[3]|max_length[20]',
-            'email' => 'required|min_length[6]|max_length[50]',
-            'username' => 'required|min_length[6]|max_length[50]',
-            'password' => 'required|min_length[6]|max_length[200]',
-            'password_confirmation' => 'required|min_length[6]|max_length[200]|matches[password]',
+            'name_user' => 'required|min_length[1]|max_length[50]',
+            'email' => 'required|min_length[1]|max_length[50]',
+            'username' => 'required|min_length[1]|max_length[50]',
+            'password' => 'required|min_length[1]|max_length[200]',
+            'password_confirmation' => 'required|min_length[1]|max_length[200]|matches[password]',
         ];
 
         if ($this->validate($rules)) {

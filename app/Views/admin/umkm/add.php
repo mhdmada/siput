@@ -75,6 +75,7 @@
                             <option>Jasa</option>
                             <option>Pertanian</option>
                             <option>Peternakan</option>
+                            <option>Kriya</option>
                             <option>Lainnya</option>
                         </select>
                     </div>

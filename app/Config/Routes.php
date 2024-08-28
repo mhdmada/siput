@@ -42,6 +42,8 @@ $routes->put('auth/(:any)', 'Register::save');
 // $routes->post('auth/processForgotPassword', 'Auth::processForgotPassword');
 
 $routes->get('home', 'Dashboard::index');
+$routes->get('umkm/add', 'Dashboard::umkm');
+$routes->get('pelatihan_dinas/persyaratan', 'Dashboard::pelatihan');
 
 $routes->get('profile', 'UserProfile::index');
 $routes->post('profile/upload', 'UserProfile::upload');
@@ -78,7 +80,6 @@ $routes->get('perizinan', 'Perizinan::index');
 // $routes->delete('perizinan/(:segment)', 'Perizinan::destroy/$1');
 
 $routes->get('pelatihan_dinas', 'PelatihanDinas::index');
-$routes->get('pelatihan_dinas/persyaratan', 'PelatihanDinas::persyaratan');
 $routes->get('pelatihan_dinas/daftar', 'PelatihanDinas::daftar');
 $routes->post('pelatihan_dinas/save', 'PelatihanDinas::save');
 $routes->get('pelatihan_dinas/berhasil_daftar/(:num)', 'PelatihanDinas::berhasil/$1');
@@ -136,6 +137,9 @@ $routes->get('admin/syarat_pelatihan/edit/(:segment)', 'AdminSyaratPelatihan::ed
 $routes->post('admin/syarat_pelatihan/update/(:segment)', 'AdminSyaratPelatihan::update/$1');
 
 $routes->get('admin/pendaftar', 'AdminPendaftaran::index');
+$routes->post('adminpendaftaran/approve/(:num)', 'AdminPendaftaran::approve/$1');
+$routes->post('adminpendaftaran/reject/(:num)', 'AdminPendaftaran::reject/$1');
+$routes->delete('adminpendaftaran/destroy/(:num)', 'AdminPendaftaran::destroy/$1');
 
 $routes->get('admin/laporan', 'AdminLaporan::index');
 $routes->get('admin/laporan/export', 'AdminLaporan::export');

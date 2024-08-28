@@ -15,11 +15,11 @@
             <div class="col-lg-3 col-md-6 col-sm-6 col-12">
               <div class="card card-statistic-1">
                 <div class="card-icon bg-primary">
-                  <i class="far fa-user"></i>
+                  <i class="far fa-folder-open"></i>
                 </div>
                 <div class="card-wrap">
                   <div class="card-header">
-                    <h4>Total Data UMKM</h4>
+                    <h4>Data UMKM</h4>
                   </div>
                   <div class="card-body">
                   <?= $totalUmkm ?>
@@ -30,11 +30,11 @@
             <div class="col-lg-3 col-md-6 col-sm-6 col-12">
               <div class="card card-statistic-1">
                 <div class="card-icon bg-danger">
-                  <i class="far fa-newspaper"></i>
+                  <i class="fas fa-info-circle"></i>
                 </div>
                 <div class="card-wrap">
                   <div class="card-header">
-                    <h4>Total Info Pelatihan UMKM</h4>
+                    <h4>Info Pelatihan UMKM</h4>
                   </div>
                   <div class="card-body">
                   <?= $totalPelatihan ?>
@@ -45,11 +45,11 @@
             <div class="col-lg-3 col-md-6 col-sm-6 col-12">
               <div class="card card-statistic-1">
                 <div class="card-icon bg-warning">
-                  <i class="far fa-file"></i>
+                  <i class="fas fa-industry"></i>
                 </div>
                 <div class="card-wrap">
                   <div class="card-header">
-                    <h4>Total Data Produk UMKM</h4>
+                    <h4>Data Produk UMKM</h4>
                   </div>
                   <div class="card-body">
                   <?= $totalProducts ?>
@@ -60,11 +60,11 @@
             <div class="col-lg-3 col-md-6 col-sm-6 col-12">
               <div class="card card-statistic-1">
                 <div class="card-icon bg-success">
-                  <i class="fas fa-circle"></i>
+                  <i class="fas fa-user"></i>
                 </div>
                 <div class="card-wrap">
                   <div class="card-header">
-                    <h4>Total Pengguna</h4>
+                    <h4>Pengguna</h4>
                   </div>
                   <div class="card-body">
                   <?= $totalUsers ?>

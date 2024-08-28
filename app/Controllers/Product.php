@@ -79,7 +79,7 @@ class Product extends BaseController
             $save = $this->model->save($uploadedImage);
             if ($save) {
                 return redirect()->to(site_url('product'))
-                    ->with('success', 'Image uploaded');
+                    ->with('success', 'Data produk anda berhasil diupload');
             } else {
                 session()->setFlashdata('error', $this->model->errors());
                 return redirect()->back();

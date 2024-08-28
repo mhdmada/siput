@@ -70,6 +70,15 @@
       <div class="main-content">
       <section class="section">
       <h2 class="center">Informasi Terbaru</h2>
+      <form action="" method="get" autocomplete="off">
+              <div class="float-right">
+                <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>
+              </div>
+              <div class="float-right">
+                <input type="text" name="keyword" value="<?= isset($keyword) ? $keyword : '' ?>" class="form-control" style="width:155pt;" placeholder="Cari...">
+              </div>
+        </form>
+      <br>
       <hr class="my-4">
        <div class="row">
        <?php

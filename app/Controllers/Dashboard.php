@@ -12,4 +12,14 @@ class Dashboard extends BaseController
     {
         echo view('home');
     }
+
+    public function umkm()
+    {
+        return view('umkm/add');
+    }
+
+    public function pelatihan()
+    {
+        return view('pelatihan_dinas/persyaratan');
+    }
 }

@@ -97,7 +97,7 @@
         </form>
         <ul class="navbar-nav navbar-right">
           <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
-            <img alt="image" src="<?=base_url()?>/template/assets/img/news/ziqran.jpg" class="rounded-circle mr-1">
+            <img alt="image" src="<?=base_url()?>/template/assets/img/disnakerkop.jpg" class="rounded-circle mr-1">
             <div class="d-sm-none d-lg-inline-block"> Halo, Admin</div></a>
             <div class="dropdown-menu dropdown-menu-right">
               <!-- <a href="features-settings.html" class="dropdown-item has-icon">
@@ -162,5 +162,6 @@
   <script src="<?=base_url()?>/template/assets/js/custom.js"></script>
 
   <!-- Page Specific JS File -->
+  <!-- <script src="<?=base_url()?>/template/assets/js/page/modules-chartjs.js"></script> -->
 </body>
 </html>

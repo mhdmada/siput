@@ -26,7 +26,7 @@
                     </p>
                     <div class="card-footer bg-whitesmoke">
                     <div class="buttons float-left">
-                    <a href="<?= site_url('pelatihan_dinas/persyaratan') ?>" class="btn btn-primary">
+                    <a href="<?= site_url('pelatihan_dinas') ?>" class="btn btn-primary">
                         Kembali
                     </a>
                     </div>

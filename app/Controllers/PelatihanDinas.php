@@ -14,15 +14,7 @@ class PelatihanDinas extends BaseController
         $model = new SyaratPelatihanModel();
         $data['syarat_pelatihan'] = $model->findAll();
 
-        return view('pelatihan_dinas/get',$data);
-    }
-
-    public function persyaratan()
-    {
-        $model = new SyaratPelatihanModel();
-        $data['syarat_pelatihan'] = $model->findAll();
-
-        return view('pelatihan_dinas/persyaratan',$data);
+        return view('pelatihan_dinas/persyaratan', $data);
     }
 
     public function daftar()

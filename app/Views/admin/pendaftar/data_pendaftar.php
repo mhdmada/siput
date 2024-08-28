@@ -45,8 +45,7 @@
               </div>
             </form>
           </div>
-
-                  <div class="card-body table-responsive">
+            <div class="card-body table-responsive">
                   <?php if($noResults): ?>
                   <h6>Tidak ada hasil.</h6>
                  <?php else: ?>
@@ -59,12 +58,17 @@
                             <th>KK</th>
                             <th>NIB</th>
                             <th>NPWP</th>
+                            <th>Kode Pendaftaran</th>
+                            <th>Waktu Daftar</th>
+                            <th>Status</th>
                             <th>Opsi</th>
+                            <th>Hapus</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php
-                        $no  = 1;
+                        $page = isset($_GET['page']) ? $_GET['page'] : 1;
+                        $no = 1 + (10 * ($page - 1));
                         foreach ($pendaftaran as $row) {
                         ?>
                             <tr>
@@ -74,6 +78,19 @@
                                 <td><a href="<?= site_url('uploads/berkas/' . $row['file_kk']) ?>" download><?= $row['file_kk'] ?></a></td>
                                 <td><a href="<?= site_url('uploads/berkas/' . $row['file_nib']) ?>" download><?= $row['file_nib'] ?></a></td>
                                 <td><a href="<?= site_url('uploads/berkas/' . $row['file_npwp']) ?>" download><?= $row['file_npwp'] ?></a></td>
+                                <td><?= $row['kode_daftar'] ?></td>
+                                <td><?=date('d/m/Y', strtotime($row['created_at']))?></td>
+                                <td><?= $row['status'] ?></td>
+                                <td class="text-center" style="width:20%">
+                                <form action="<?= site_url('adminpendaftaran/approve/' . $row['id_daftar']) ?>" method="post" class="d-inline">
+                                <?= csrf_field() ?>
+                                <button class="btn btn-success btn-sm">Approve</button>
+                                </form>
+                                <form action="<?= site_url('adminpendaftaran/reject/' . $row['id_daftar']) ?>" method="post" class="d-inline" onsubmit="return confirm('Yakin tolak Data?')">
+                                <?= csrf_field() ?>
+                                <button class="btn btn-danger btn-sm">Tolak</button>
+                                </form>
+                                </td>
                                 <td class="text-center" style="width:10%">
                                 <form action="<?= site_url('adminpendaftaran/destroy/' . $row['id_daftar']) ?>" method="post" class="d-inline" onsubmit="return confirm('Yakin hapus Data?')">
                                 <?= csrf_field() ?>

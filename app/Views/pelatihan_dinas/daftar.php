@@ -43,19 +43,19 @@
                         <input type="text" class="form-control" id="nama_lengkap" name="nama_lengkap" value="<?= old('nama_lengkap') ?>">
                     </div>
                     <div class="form-group">
-                        <label for="file_ktp">Upload KTP *(pdf,doc,docx)</label>
+                        <label for="file_ktp">Upload Syarat 1 *(pdf,doc,docx)</label>
                         <input type="file" class="form-control" id="file_ktp" name="file_ktp">
                     </div>
                     <div class="form-group">
-                        <label for="file_kk">Upload KK *(pdf,doc,docx)</label>
+                        <label for="file_kk">Upload Syarat 2 *(pdf,doc,docx)</label>
                         <input type="file" class="form-control" id="file_kk" name="file_kk">
                     </div>
                     <div class="form-group">
-                        <label for="file_nib">Upload NIB *(pdf,doc,docx)</label>
+                        <label for="file_nib">Upload Syarat 3 *(pdf,doc,docx)</label>
                         <input type="file" class="form-control" id="file_nib" name="file_nib">
                     </div>
                     <div class="form-group">
-                        <label for="file_npwp">Upload NPWP *(pdf,doc,docx)</label>
+                        <label for="file_npwp">Upload Syarat 4*(pdf,doc,docx)</label>
                         <input type="file" class="form-control" id="file_npwp" name="file_npwp">
                     </div>
                     <button type="submit" class="btn btn-primary">Daftar</button>

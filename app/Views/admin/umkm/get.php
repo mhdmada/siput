@@ -64,7 +64,7 @@
                           <th>KELURAHAN</th>
                           <th>KECAMATAN</th>
                           <th>NAMA USAHA</th>
-                          <th>ALAMATA USAHA</th>
+                          <th>ALAMAT USAHA</th>
                           <th>BIDANG USAHA</th>
                           <th>NIB</th>
                           <th>NPWP</th>

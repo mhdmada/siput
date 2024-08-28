@@ -39,6 +39,11 @@ class DaftarPelatihan extends Migration
 				'type'           => 'VARCHAR',
 				'constraint'     => '100',
 			],
+			'status' 		  => [
+                'type'       	=> 'VARCHAR',
+                'constraint' 	=> '100',
+                'default'    	=> 'pending',
+            ],
 			'created_at datetime default current_timestamp',
             'updated_at datetime default current_timestamp on update current_timestamp',
             'deleted_at datetime default current_timestamp on update current_timestamp',

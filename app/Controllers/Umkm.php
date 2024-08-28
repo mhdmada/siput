@@ -23,12 +23,12 @@ class Umkm extends BaseController
         //setting rules buat validasi form
         $rules = [
             'nik' => 'required|numeric',
-            'nama' => 'required|min_length[3]|max_length[200]',
-            'nama_usaha' => 'required|min_length[3]|max_length[200]',
-            'alamat' => 'required|min_length[3]|max_length[200]',
-            'kelurahan' => 'required|min_length[3]|max_length[200]',
-            'kecamatan' => 'required|min_length[3]|max_length[200]',
-            'alamat_usaha' => 'required|min_length[3]|max_length[200]',
+            'nama' => 'required|min_length[1]|max_length[200]',
+            'nama_usaha' => 'required|min_length[1]|max_length[200]',
+            'alamat' => 'required|min_length[1]|max_length[200]',
+            'kelurahan' => 'required|min_length[1]|max_length[200]',
+            'kecamatan' => 'required|min_length[1]|max_length[200]',
+            'alamat_usaha' => 'required|min_length[1]|max_length[200]',
             'bidang_usaha' => 'required|min_length[1]|max_length[200]',
             'nib' => 'required|min_length[6]|max_length[50]',
             'npwp' => 'required|min_length[6]|max_length[50]',

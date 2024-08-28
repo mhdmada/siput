@@ -37,9 +37,25 @@ class Konten extends BaseController
     public function informasi()
     {
         $model = new ArtikelModel();
+
+        $keyword = $this->request->getVar('keyword');
+        
+        if ($keyword) {
+            $model->like('judul_artikel', $keyword)
+                  ->orLike('foto_artikel', $keyword)
+                  ->orLike('isi_artikel', $keyword)
+                  ->orLike('tgl_artikel', $keyword)
+                  ->orLike('author', $keyword);
+        }
+
+        $totalResults = $model->countAllResults(false);
+
         $data = [
             'artikel' => $model->paginate(9),
             'pager' => $model->pager,
+            'keyword' => $keyword, 
+            'noResults' => ($totalResults == 0), 
+            'totalResults' => $totalResults
         ];
 
         return view('public/informasi', $data);
